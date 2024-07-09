@@ -8,6 +8,7 @@ package org.zajednickiP.domain;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  *
@@ -35,8 +36,7 @@ public class StavkaPorudzbine extends AbstractDomainObject {
         setProizvod(proizvod);
     }
 
-    public StavkaPorudzbine() {
-    }
+    
 
     @Override
     public String nazivTabele() {
@@ -75,11 +75,13 @@ public class StavkaPorudzbine extends AbstractDomainObject {
                     rs.getTimestamp("datumVreme"), rs.getDate("datumIsporuke"),
                     rs.getString("grad"), rs.getString("adresa"),
                     rs.getDouble("cena"), rs.getDouble("popust"),
-                    rs.getDouble("konacnaCena"), k, a, null);
+                    rs.getDouble("konacnaCena"), k, a, new ArrayList<>());
             
             //public Knjiga(Long proizvodID, double cena, String naziv,int tip,int izdanje,String opis,ArrayList<Autor> autori)
           //  public KancelarijskiProizvod(Long proizvodID, double cena, String naziv,int tip,String vrsta,String proizvodjac,double visina,double sirina,double duzina)
-            StavkaPorudzbine sp=new StavkaPorudzbine();
+           
+            Proizvod proizvod=new Proizvod(null, 2000,"pravim ovako samo zato jer nemam bezparam konstruktor",1);
+            StavkaPorudzbine sp=new StavkaPorudzbine(p, 0, 2, 2500,proizvod);
             if(rs.getInt("tip")==1) {
             	KancelarijskiProizvod kp=new KancelarijskiProizvod(rs.getLong("proizvodID"), rs.getDouble("cena"), rs.getString("naziv"),
             			rs.getInt("tip"), rs.getString("vrsta"), rs.getString("proizvodjac"), rs.getDouble("visina"),rs.getDouble("sirina"), rs.getDouble("duzina"));
@@ -87,7 +89,7 @@ public class StavkaPorudzbine extends AbstractDomainObject {
             }else {
             	 Knjiga knj = new Knjiga(rs.getLong("proizvodID"),
                          rs.getDouble("cena"), rs.getString("naziv"),
-                         rs.getInt("tip"), rs.getInt("izdanje"),rs.getString("opis"), null);
+                         rs.getInt("tip"), rs.getInt("izdanje"),rs.getString("opis"), new ArrayList<>());
             	 sp = new StavkaPorudzbine(p, rs.getInt("rb"), 
                          rs.getInt("kolicina"), rs.getDouble("cena"), knj);
             }
@@ -183,7 +185,30 @@ public class StavkaPorudzbine extends AbstractDomainObject {
 		return "StavkaPorudzbine [porudzbina=" + porudzbina + ", rb=" + rb + ", kolicina=" + kolicina + ", cena=" + cena
 				+ ", proizvod=" + proizvod + "]";
 	}
+
+
+
+	
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		StavkaPorudzbine other = (StavkaPorudzbine) obj;
+		return Double.doubleToLongBits(cena) == Double.doubleToLongBits(other.cena) && kolicina == other.kolicina
+				&& Objects.equals(porudzbina, other.porudzbina) && Objects.equals(proizvod, other.proizvod)
+				&& rb == other.rb;
+	}
     
+	
+	
+	
     
     
     

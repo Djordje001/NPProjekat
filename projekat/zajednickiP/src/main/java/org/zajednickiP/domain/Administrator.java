@@ -22,8 +22,7 @@ public class Administrator extends AbstractDomainObject {
     private String username;
     private String password;
 
-    public Administrator() {
-    }
+    
 
     public Administrator(Long administratorID, String ime, String prezime, String username, String password) {
        

@@ -3,6 +3,7 @@ package org.zajednickiP.domain;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class KancelarijskiProizvod extends Proizvod{
 	private String vrsta;
@@ -11,9 +12,7 @@ public class KancelarijskiProizvod extends Proizvod{
 	private double sirina;
 	private double duzina;
 	
-	public KancelarijskiProizvod() {
-		// TODO Auto-generated constructor stub
-	}
+	
 
 	public KancelarijskiProizvod(Long proizvodID, double cena, String naziv,int tip,String vrsta,String proizvodjac,double visina,double sirina,double duzina) {
 		super(proizvodID, cena, naziv,tip);
@@ -170,6 +169,25 @@ public class KancelarijskiProizvod extends Proizvod{
 		return super.toString()+
 				"KancelarijskiProizvod [ vrsta=" + vrsta + ", proizvodjac=" + proizvodjac + ", visina=" + visina
 				+ ", sirina=" + sirina + ", duzina=" + duzina + "]";
+	}
+
+	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		KancelarijskiProizvod other = (KancelarijskiProizvod) obj;
+		return super.equals(obj) &&
+				Double.doubleToLongBits(duzina) == Double.doubleToLongBits(other.duzina)
+				&& Objects.equals(proizvodjac, other.proizvodjac)
+				&& Double.doubleToLongBits(sirina) == Double.doubleToLongBits(other.sirina)
+				&& Double.doubleToLongBits(visina) == Double.doubleToLongBits(other.visina)
+				&& Objects.equals(vrsta, other.vrsta);
 	}
 
 	

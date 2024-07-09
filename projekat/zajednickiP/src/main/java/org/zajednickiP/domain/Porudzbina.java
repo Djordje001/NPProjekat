@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  *
@@ -54,8 +55,7 @@ public class Porudzbina extends AbstractDomainObject {
         setStavkePorudzbine(stavkePorudzbine);
     }
 
-    public Porudzbina() {
-    }
+    
 
     @Override
     public String toString() {
@@ -99,7 +99,7 @@ public class Porudzbina extends AbstractDomainObject {
                     rs.getTimestamp("datumVreme"), rs.getDate("datumIsporuke"),
                     rs.getString("grad"), rs.getString("adresa"),
                     rs.getDouble("cena"), rs.getDouble("popust"),
-                    rs.getDouble("konacnaCena"), k, a, null);
+                    rs.getDouble("konacnaCena"), k, a, new ArrayList<>());
 
             lista.add(p);
         }
@@ -278,10 +278,38 @@ public class Porudzbina extends AbstractDomainObject {
     	if(stavkePorudzbine==null) {
     		throw new NullPointerException("stavke ne smeju biti null");
     	}
-    	if(stavkePorudzbine.isEmpty()) {
+    	/*if(stavkePorudzbine.isEmpty()) {   ovo sam ipak dozvolio a onda cu kod sistemskih operacija za porudzbinu da proveravam da li je prazna lista
     		throw new IllegalArgumentException("porudzbina mora sadrzati barem jednu stavku");
-    	}
+    	}*/
         this.stavkePorudzbine = stavkePorudzbine;
     }
+
+
+
+	
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Porudzbina other = (Porudzbina) obj;
+		return Objects.equals(administrator, other.administrator) && Objects.equals(adresa, other.adresa)
+				&& Double.doubleToLongBits(cena) == Double.doubleToLongBits(other.cena)
+				&& Objects.equals(datumIsporuke, other.datumIsporuke) && Objects.equals(datumVreme, other.datumVreme)
+				&& Objects.equals(grad, other.grad)
+				&& Double.doubleToLongBits(konacnaCena) == Double.doubleToLongBits(other.konacnaCena)
+				&& Objects.equals(kupac, other.kupac)
+				&& Double.doubleToLongBits(popust) == Double.doubleToLongBits(other.popust)
+				&& Objects.equals(porudzbinaID, other.porudzbinaID);
+	}
+    
+    
+    
 
 }

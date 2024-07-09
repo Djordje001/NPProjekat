@@ -3,6 +3,7 @@ package org.zajednickiP.domain;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Proizvod extends AbstractDomainObject {
 	private Long proizvodID;
@@ -11,9 +12,7 @@ public class Proizvod extends AbstractDomainObject {
 	private int tip;
 	
 	
-	public Proizvod() {
-		
-	}
+	
 	
 	
 	public Proizvod(Long proizvodID, double cena, String naziv,int tip) {
@@ -97,7 +96,7 @@ public class Proizvod extends AbstractDomainObject {
 	        		a=new KancelarijskiProizvod(rs.getLong("ProizvodID"), rs.getDouble("Cena"), rs.getString("Naziv"),rs.getInt("Tip"), rs.getString("Vrsta"), rs.getString("Proizvodjac"), rs.getDouble("Visina"), rs.getDouble("Sirina"), rs.getDouble("Duzina"));
 	        	}else {
 	        		//public Knjiga(Long proizvodID, double cena, String naziv,int tip,int izdanje,String opis,ArrayList<Autor> autori)
-	        	   a=new Knjiga(rs.getLong("ProizvodID"),rs.getDouble("cena"),rs.getString("Naziv"),rs.getInt("Tip"),rs.getInt("Izdanje"),rs.getString("Opis"),null);
+	        	   a=new Knjiga(rs.getLong("ProizvodID"),rs.getDouble("cena"),rs.getString("Naziv"),rs.getInt("Tip"),rs.getInt("Izdanje"),rs.getString("Opis"),new ArrayList<>());
 	        	}
 	            /*Proizvod a = new Proizvod(rs.getLong("ProizvodID"),
 	                    rs.getDouble("Cena"), rs.getString("Naziv"),rs.getInt("Tip")
@@ -149,6 +148,21 @@ public class Proizvod extends AbstractDomainObject {
 	public String toString() {
 		return "Proizvod [proizvodID=" + proizvodID + ", cena=" + cena + ", naziv=" + naziv + ", tip=" + tip + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Proizvod other = (Proizvod) obj;
+		return Double.doubleToLongBits(cena) == Double.doubleToLongBits(other.cena)
+				&& Objects.equals(naziv, other.naziv) && Objects.equals(proizvodID, other.proizvodID)
+				&& tip == other.tip;
+	}
 
+	
 
 }

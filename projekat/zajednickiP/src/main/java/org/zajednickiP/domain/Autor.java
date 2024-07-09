@@ -29,8 +29,7 @@ public class Autor extends AbstractDomainObject {
         setPisac(pisac);
     }
 
-    public Autor() {
-    }
+    
 
     @Override
     public String nazivTabele() {
@@ -136,10 +135,7 @@ public class Autor extends AbstractDomainObject {
 		return "Autor [ + , rb=" + rb + ", pisac=" + pisac.getPisacID() + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(knjiga, pisac, rb);
-	}
+	
 
 	@Override
 	public boolean equals(Object obj) {

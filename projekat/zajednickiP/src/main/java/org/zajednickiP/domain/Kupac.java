@@ -8,6 +8,7 @@ package org.zajednickiP.domain;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  *
@@ -40,8 +41,6 @@ public class Kupac extends AbstractDomainObject {
        
     }
 
-    public Kupac() {
-    }
     
     @Override
     public String nazivTabele() {
@@ -164,5 +163,23 @@ public class Kupac extends AbstractDomainObject {
     	}
         this.tipKupca = tipKupca;
     }
+
+	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Kupac other = (Kupac) obj;
+		return Objects.equals(email, other.email) && Objects.equals(ime, other.ime)
+				&& Objects.equals(kupacID, other.kupacID) && Objects.equals(prezime, other.prezime)
+				&& Objects.equals(tipKupca, other.tipKupca);
+	}
+    
+    
     
 }

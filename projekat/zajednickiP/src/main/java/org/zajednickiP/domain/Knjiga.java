@@ -3,6 +3,7 @@ package org.zajednickiP.domain;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Knjiga extends Proizvod{
 	private int izdanje;
@@ -10,9 +11,7 @@ public class Knjiga extends Proizvod{
 	private ArrayList<Autor> autori;
 	
 	
-	public Knjiga() {
-		// TODO Auto-generated constructor stub
-	}
+	
 	
 	
 	
@@ -111,7 +110,7 @@ public class Knjiga extends Proizvod{
 
 	        while (rs.next()) {
 	            Knjiga a = new Knjiga(rs.getLong("ProizvodID"),
-	                    rs.getDouble("Cena"), rs.getString("Naziv"),rs.getInt("tip"),rs.getInt("Izdanje"),rs.getString("Opis"),null);
+	                    rs.getDouble("Cena"), rs.getString("Naziv"),rs.getInt("tip"),rs.getInt("Izdanje"),rs.getString("Opis"),new ArrayList<>());
 	                   
 
 	            lista.add(a);
@@ -161,6 +160,33 @@ public class Knjiga extends Proizvod{
 
 
 
+
+
+
+	
+
+
+
+
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Knjiga other = (Knjiga) obj;
+		return   super.equals(obj) && 
+				 izdanje == other.izdanje && Objects.equals(opis, other.opis);
+	}
+
+
+
+     
 	
 	
 	
