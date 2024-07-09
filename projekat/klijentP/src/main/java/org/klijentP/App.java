@@ -101,8 +101,7 @@ public class App
         	Proizvod proizvod1=proizvodi.get(2);
         	
         
-        	stavke.add(new StavkaPorudzbine(null, 1, 2, 10000, proizvod));
-         	stavke.add(new StavkaPorudzbine(null, 2, 3, 9999, proizvod1));
+        	
         	
         	Date datumVreme=new Date();
         	SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
@@ -115,6 +114,8 @@ public class App
 	        
         	//Long porudzbinaID, Date datumVreme, Date datumIsporuke, String grad, String adresa, double cena, double popust, double konacnaCena, Kupac kupac, Administrator administrator, ArrayList<StavkaPorudzbine> stavkePorudzbine
         	Porudzbina p=new Porudzbina(null,datumVreme,datumIsporuke,grad,adresa,cena,popust,konacnaCena,kupac, administrator,stavke);
+        	stavke.add(new StavkaPorudzbine(p, 1, 2, 10000, proizvod));
+         	stavke.add(new StavkaPorudzbine(p, 2, 3, 9999, proizvod1));
         	ClientController.getInstance().addPorudzbina(p);
         	
         	}
@@ -169,8 +170,16 @@ public class App
             ArrayList<Autor> autoriNovi=new ArrayList<>();
             if(autori.size()>0) {
             autoriNovi.add(autori.get(0));
-    		 Proizvod p=new Knjiga(20L,1000,"ahahahaha",2,10,"lord dominik",autoriNovi);
-    		 ClientController.getInstance().updateProizvod(p);
+            ArrayList<Proizvod> proizvodi=ClientController.getInstance().getAllProizvod();
+            if(proizvodi.size()>0) {
+            	for(Proizvod p : proizvodi) {
+            		if(p.getTip()==2) {
+            	 Proizvod proizvod=p;
+        		 ClientController.getInstance().updateProizvod(proizvod);
+            		}
+            	}
+            }
+    		
             }
         	}
         	catch(Exception e) {
@@ -196,7 +205,7 @@ public class App
     		// stavke.add(new StavkaPorudzbine(p,2,4,4*proizvodi.get(1).getCena(),proizvodi.get(1)));
     		 p.setStavkePorudzbine(stavke);
     		 cena+=stavke.get(0).getCena();
-    		 cena+=stavke.get(1).getCena();
+    		// cena+=stavke.get(1).getCena();
     		 p.setKonacnaCena(cena-(p.getPopust()/100)*cena);
     		 p.setCena(cena);
     		   SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
