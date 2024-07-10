@@ -16,6 +16,9 @@ public class KancelarijskiProizvod extends Proizvod{
 
 	public KancelarijskiProizvod(Long proizvodID, double cena, String naziv,int tip,String vrsta,String proizvodjac,double visina,double sirina,double duzina) {
 		super(proizvodID, cena, naziv,tip);
+		if(tip!=1) {
+			throw new IllegalArgumentException("Za kancelarijskiProizvod je odredjen tip=1");
+		}
 		setVrsta(vrsta);
 		
 		setProizvodjac(proizvodjac);

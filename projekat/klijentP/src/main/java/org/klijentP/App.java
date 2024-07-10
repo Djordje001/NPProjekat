@@ -31,8 +31,8 @@ public class App
        // addKupac();
         //addPorudzbina();
         //findAllPorudzbina();
-      //  deletePorudzbina();
-   //     updatePorudzbina();
+        //deletePorudzbina();
+     //  updatePorudzbina();
         //findAllStavke();
         
     }
@@ -98,11 +98,10 @@ public class App
         	Administrator administrator=administratori.get(0);
         	Kupac kupac=kupci.get(0);
         	Proizvod proizvod=proizvodi.get(0);
-        	Proizvod proizvod1=proizvodi.get(2);
+        	Proizvod proizvod1=proizvodi.get(1);
         	
         
-        	stavke.add(new StavkaPorudzbine(null, 1, 2, 10000, proizvod));
-         	stavke.add(new StavkaPorudzbine(null, 2, 3, 9999, proizvod1));
+        	
         	
         	Date datumVreme=new Date();
         	SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
@@ -115,7 +114,12 @@ public class App
 	        
         	//Long porudzbinaID, Date datumVreme, Date datumIsporuke, String grad, String adresa, double cena, double popust, double konacnaCena, Kupac kupac, Administrator administrator, ArrayList<StavkaPorudzbine> stavkePorudzbine
         	Porudzbina p=new Porudzbina(null,datumVreme,datumIsporuke,grad,adresa,cena,popust,konacnaCena,kupac, administrator,stavke);
+        	
+        	stavke.add(new StavkaPorudzbine(p, 1, 2, 10000, proizvod));
+         	stavke.add(new StavkaPorudzbine(p, 2, 3, 9999, proizvod1));
         	ClientController.getInstance().addPorudzbina(p);
+        	
+        	
         	
         	}
         	}catch(Exception e) {
@@ -196,19 +200,21 @@ public class App
     		// stavke.add(new StavkaPorudzbine(p,2,4,4*proizvodi.get(1).getCena(),proizvodi.get(1)));
     		 p.setStavkePorudzbine(stavke);
     		 cena+=stavke.get(0).getCena();
-    		 cena+=stavke.get(1).getCena();
+    		// cena+=stavke.get(1).getCena();
     		 p.setKonacnaCena(cena-(p.getPopust()/100)*cena);
     		 p.setCena(cena);
     		   SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
 	            Date datumIsporuke = sdf.parse("23.12.2026.");
 	            p.setDatumIsporuke(datumIsporuke);
+	            System.out.println(p.getStavkePorudzbine());
     		 ClientController.getInstance().updatePorudzbina(p);
     		 }
     		}
     	    //    public Porudzbina(Long porudzbinaID, Date datumVreme, Date datumIsporuke, String grad, String adresa, double cena, double popust, double konacnaCena, Kupac kupac, Administrator administrator, ArrayList<StavkaPorudzbine> stavkePorudzbine)
         	}
         	catch(Exception e) {
-        		System.out.println(e.getMessage());
+        	    e.printStackTrace();
+        		System.out.println("hehe");
         	}
     }
     

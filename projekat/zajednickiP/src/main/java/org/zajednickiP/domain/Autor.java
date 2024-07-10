@@ -10,13 +10,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  *
  * @author Lenovo
  */
 public class Autor extends AbstractDomainObject {
 
-    private transient Knjiga knjiga;
+	
+    private Knjiga knjiga;
     private int rb;
     private Pisac pisac;
 
@@ -58,7 +61,7 @@ public class Autor extends AbstractDomainObject {
 
             Knjiga k = new Knjiga(rs.getLong("ProizvodID"),
                     rs.getDouble("cena"), rs.getString("naziv"),rs.getInt("tip"),
-                    rs.getInt("izdanje"), rs.getString("opis"), null);
+                    rs.getInt("izdanje"), rs.getString("opis"), new ArrayList<>());
 
             Pisac p = new Pisac(rs.getLong("PisacID"),
                     rs.getString("Ime"), rs.getString("Prezime"),

@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  *
  * @author Lenovo
@@ -17,7 +19,7 @@ import java.util.Objects;
 public class StavkaPorudzbine extends AbstractDomainObject {
 
 	
-    private transient Porudzbina porudzbina;
+    private  Porudzbina porudzbina;
     private int rb;
     private int kolicina;
     private double cena;

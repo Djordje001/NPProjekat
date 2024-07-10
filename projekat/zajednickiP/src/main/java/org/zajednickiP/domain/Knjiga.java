@@ -18,6 +18,9 @@ public class Knjiga extends Proizvod{
 
 	public Knjiga(Long proizvodID, double cena, String naziv,int tip,int izdanje,String opis,ArrayList<Autor> autori) {
 		super(proizvodID, cena, naziv,tip);
+		if(tip!=2) {
+			throw new IllegalArgumentException("Za knjigu je odredjen tip=2");
+		}
 		setIzdanje(izdanje);
 		
 		setOpis(opis);

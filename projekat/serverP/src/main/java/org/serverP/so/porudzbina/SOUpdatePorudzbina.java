@@ -53,9 +53,9 @@ public class SOUpdatePorudzbina extends AbstractSO {
 
         
         DBBroker.getInstance().update(ado);
-
-        Porudzbina p = (Porudzbina) ado;
         
+        Porudzbina p = (Porudzbina) ado;
+        System.out.println(p.getStavkePorudzbine().get(0).getPorudzbina());
         DBBroker.getInstance().delete(p.getStavkePorudzbine().get(0));
 
         
@@ -64,7 +64,7 @@ public class SOUpdatePorudzbina extends AbstractSO {
         }
         
         
-        
+        App.serijalizujPromenu();
 
     }
 

@@ -88,6 +88,8 @@ public class ThreadClient extends Thread {
                 ServerController.getInstance().updateProizvod((Proizvod) request.getData());
                 break;
             case Operation.UPDATE_PORUDZBINA:
+            	Porudzbina p=(Porudzbina)request.getData();
+            	System.out.println(p.getStavkePorudzbine());
                 ServerController.getInstance().updatePorudzbina((Porudzbina) request.getData());
                 break;
 

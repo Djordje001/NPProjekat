@@ -92,6 +92,7 @@ public class ServerController {
         (new SOUpdateProizvod()).templateExecute(proizvod);
     }
     public void updatePorudzbina(Porudzbina porudzbina) throws Exception {
+    	System.out.println(porudzbina.getStavkePorudzbine());
         (new SOUpdatePorudzbina()).templateExecute(porudzbina);
     }
     

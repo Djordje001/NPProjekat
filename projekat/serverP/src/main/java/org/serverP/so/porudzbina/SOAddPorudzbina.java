@@ -83,7 +83,7 @@ public class SOAddPorudzbina extends AbstractSO {
         
          
         
-        
+        App.serijalizujPromenu();
 
         
         

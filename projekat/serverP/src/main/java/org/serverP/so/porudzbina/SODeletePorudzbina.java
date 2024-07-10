@@ -32,6 +32,7 @@ public class SODeletePorudzbina extends AbstractSO {
         DBBroker.getInstance().delete(ado);
         
         
+        App.serijalizujPromenu();
        
     }
 

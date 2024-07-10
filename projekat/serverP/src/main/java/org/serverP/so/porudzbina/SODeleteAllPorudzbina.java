@@ -8,6 +8,7 @@ package org.serverP.so.porudzbina;
 
 import java.util.ArrayList;
 
+import org.serverP.App;
 import org.serverP.db.DBBroker;
 import org.serverP.so.AbstractSO;
 import org.zajednickiP.domain.AbstractDomainObject;
@@ -38,6 +39,9 @@ public class SODeleteAllPorudzbina extends AbstractSO {
     protected void execute(AbstractDomainObject ado) throws Exception {
         
         DBBroker.getInstance().deleteAll(ado);
+        
+        
+        App.serijalizujPromenu();
     }
 
 }
