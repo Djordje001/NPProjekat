@@ -129,6 +129,7 @@ public class ServerController {
         Pisac pisac=new Pisac(null, "pravim ovako samo zato jer nemam bezparametarski konstruktor", "x", "x");
         Autor autor=new Autor(k, 0,pisac );
        // autor.setKnjiga(k);
+        System.out.println(autor);
         
         so.templateExecute(autor);
         return so.getLista();

@@ -20,25 +20,28 @@ public class App
     {
         System.out.println( "Hello World!" );
        // addProizvod();
-       // deleteProizvod();
+        //deleteProizvod();
         //getStavke();
         //getAllProizvod();
-       // findAllProizvod();
+        //findAllProizvod();
         //login();
-       // updateProizvod();
-       // getAllPisac();
-       // getAllKupac();
+     //  updateProizvod();
+     //   getAllPisac();
+        //getAllKupac();
        // addKupac();
         //addPorudzbina();
-        //findAllPorudzbina();
+      //  findAllPorudzbina();
         //deletePorudzbina();
      //  updatePorudzbina();
         //findAllStavke();
+        //findAllAutori();
+        //getAllAdministrator();
+      //  getAllPorudzbina();
         
     }
     public static void login() {
     	try {
-    		Administrator a=new Administrator(null, "djole", "djole123", "123", "123");
+    		Administrator a=new Administrator(null, "djole", "djole123", "dule1", "savic");
     		
         	Administrator pronadjen=ClientController.getInstance().login(a);
         	System.out.println(pronadjen);
@@ -72,10 +75,11 @@ public class App
     	System.out.println(pisci);
     	//Proizvod p=new Knjiga(null,10000, "Leglo", 2, 1, "Predobro", null)
     	ArrayList<Autor> autori=new ArrayList<>();
+        Knjiga p=new Knjiga(null,10000,"Leglo",2,1,"Predobro",autori);
         for(Pisac pisac : pisci) {
-        	autori.add(new Autor(null,0,pisac));
+        	autori.add(new Autor(p,0,pisac));
         }
-    	Proizvod p=new Knjiga(null,10000,"Leglo",2,1,"Predobro",autori);
+    	
     	//p=new KancelarijskiProizvod(null,3000,"Ne znam ni ja",1,"lego kokcica","deda mile",0.2,0.4,0.6);
     	p=new Knjiga(null,5000,"Naziv proizvoda",2,2,"Harry Poter",autori);
     	System.out.println("proslo");
@@ -161,20 +165,37 @@ public class App
     public static void updateProizvod() {
     	try {
     		ArrayList<Pisac> pisci=ClientController.getInstance().getAllPisac();
+    		ArrayList<Proizvod> proizvodi=ClientController.getInstance().getAllProizvod();
         	System.out.println(pisci);
+        	for(Proizvod p : proizvodi) {
+        		if(p.getTip()==2) {
+        			Knjiga knjiga=(Knjiga) p;
+        			knjiga.setNaziv("Padobran");
+        			knjiga.setOpis("predobro");
+        			knjiga.setCena(2500);
+        			knjiga.setIzdanje(10);
+        		
+        			
+        			ArrayList<Autor> autori=new ArrayList<>();
+                    for(Pisac pisac : pisci) {
+                    	autori.add(new Autor(knjiga,0,pisac));
+                    	
+                    }
+                    
+                    ArrayList<Autor> autoriNovi=new ArrayList<>();
+                    if(autori.size()>0) {
+                    autoriNovi.add(autori.get(0));
+                    knjiga.setAutori(autoriNovi);
+                    
+            		 
+            		 ClientController.getInstance().updateProizvod(knjiga);
+            		 break;
+        		}
+        	}
         	
         	
-        	ArrayList<Autor> autori=new ArrayList<>();
-            for(Pisac pisac : pisci) {
-            	autori.add(new Autor(null,0,pisac));
-            	
-            }
     	 
-            ArrayList<Autor> autoriNovi=new ArrayList<>();
-            if(autori.size()>0) {
-            autoriNovi.add(autori.get(0));
-    		 Proizvod p=new Knjiga(20L,1000,"ahahahaha",2,10,"lord dominik",autoriNovi);
-    		 ClientController.getInstance().updateProizvod(p);
+           
             }
         	}
         	catch(Exception e) {
@@ -221,7 +242,7 @@ public class App
     
     public static void findAllProizvod() {
     	try {
-    		Proizvod p=new Proizvod(0L,2,"Hari poter",1);
+    		Proizvod p=new Proizvod(null,2,"Padobran",1);
     		
         	ArrayList<Proizvod> proizvodi=ClientController.getInstance().findAllProizvod(p);
         	System.out.println(proizvodi);
@@ -234,7 +255,7 @@ public class App
     public static void findAllPorudzbina() {
     	try {
     		ArrayList<Porudzbina> porudzbine=ClientController.getInstance().getAllPorudzbina();
-    		Kupac k=new Kupac(null,"Dusanka","Djordjevic","dusanka@gmail.com","PREMIUM");
+    		Kupac k=new Kupac(null,"Djordje","Djordjevic","dusanka@gmail.com","PREMIUM");
     		if(porudzbine.size()>0) {
     			Porudzbina p=porudzbine.get(0);
     			p.setKupac(k);
@@ -265,12 +286,14 @@ public class App
     public static void findAllAutori() {
     	try {
     		ArrayList<Proizvod> proizvodi=ClientController.getInstance().getAllProizvod();
-    		Knjiga k=new Knjiga(null,1,"proba",2,2,"hehe",new ArrayList());
+    		//Knjiga k=new Knjiga(null,1,"proba",2,2,"hehe",new ArrayList());
     		for(Proizvod p : proizvodi) {
     			if(p.getTip()==2) {
-    				k=(Knjiga) p;
+    				Knjiga k=(Knjiga) p;
     				ArrayList<Autor> autori=ClientController.getInstance().findAllAutor(k);
-    	    		System.out.println(autori);
+    	    		//System.out.println(autori.get(0).getKnjiga());
+    				System.out.println(autori);
+    	    		break;
     			}
     		}
     		

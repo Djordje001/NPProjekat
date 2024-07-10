@@ -33,7 +33,7 @@ public class Kupac extends AbstractDomainObject {
         
         setIme(ime);
        
-        setIme(prezime);
+        setPrezime(prezime);
        
         setEmail(email);
         

@@ -1,1 +1,102 @@
-[]
+[
+  {
+    "PorudzbinaID": 69,
+    "DatumVreme": "2024-07-10 04:28:20.0",
+    "DatumIsporuke": "2025-05-21",
+    "Grad": "Ljuba",
+    "Adresa": "Adresa 100",
+    "Cena": 18300.0,
+    "Popust": 50.0,
+    "KonacnaCena": 17934.0,
+    "Administrator": {
+      "AdministratorID": 1,
+      "Ime": "Anastasija",
+      "Prezime": "Madic",
+      "Username": "maki",
+      "Password": "makic"
+    },
+    "Kupac": {
+      "KupacID": 1,
+      "Ime": "Djordjevic",
+      "Email": "djordjevic.dj01@gmail.com",
+      "TipKupca": "FREE"
+    },
+    "StavkePorudzbine": [
+      {
+        "Rb": 35,
+        "Kolicina": 2,
+        "Cena": 10000.0,
+        "Proizvod": {
+          "proizvodID": 2,
+          "cena proizvoda": 10000.0,
+          "naziv": "Padobran",
+          "tip": 2,
+          "izdanje": 10,
+          "opis": "predobro",
+          "Autori": [
+            {
+              "Rb": 26,
+              "Pisac": {
+                "PisacID": 1,
+                "Ime": "Ivo",
+                "Prezime": "Andric",
+                "Email": "ivo.andric@gmail.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Rb": 36,
+        "Kolicina": 3,
+        "Cena": 9999.0,
+        "Proizvod": {
+          "proizvodID": 22,
+          "cena proizvoda": 9999.0,
+          "naziv": "Naziv proizvoda",
+          "tip": 2,
+          "izdanje": 2,
+          "opis": "Harry Poter",
+          "Autori": [
+            {
+              "Rb": 22,
+              "Pisac": {
+                "PisacID": 1,
+                "Ime": "Ivo",
+                "Prezime": "Andric",
+                "Email": "ivo.andric@gmail.com"
+              }
+            },
+            {
+              "Rb": 23,
+              "Pisac": {
+                "PisacID": 2,
+                "Ime": "Mesa ",
+                "Prezime": "Selimovic",
+                "Email": "mesa.selimovic@gmail.com"
+              }
+            },
+            {
+              "Rb": 24,
+              "Pisac": {
+                "PisacID": 3,
+                "Ime": "Simo",
+                "Prezime": "Matavulj",
+                "Email": "simo.matavulj@gmail.com"
+              }
+            },
+            {
+              "Rb": 25,
+              "Pisac": {
+                "PisacID": 4,
+                "Ime": "Desanka",
+                "Prezime": "Maksimovic",
+                "Email": "desanka.maksimovic@gmail.com"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
