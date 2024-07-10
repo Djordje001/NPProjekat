@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  *  predstavlja konkretnu stavku Porudzbine sa atributima:rb,kolicina,cena,proizvod
