@@ -13,18 +13,46 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- *
+ *  predstavlja konkretnu stavku Porudzbine sa atributima:rb,kolicina,cena,proizvod
  * @author Lenovo
  */
 public class StavkaPorudzbine extends AbstractDomainObject {
 
-	
+	/**
+	 * porudzbina kojoj pripada
+	 */
     private  Porudzbina porudzbina;
+    
+    /**
+     * redni broj stavek
+     */
     private int rb;
+    
+    /**
+     * kolicina konkretnog proizvoda
+     */
     private int kolicina;
+    
+    /**
+     * cena konkretne stavke
+     */
     private double cena;
+    
+    /**
+     * proizvod od kojeg se sastoji stavka
+     */
     private Proizvod proizvod;
 
+    /**
+     * postavlja sve atribute na zeljene vrednost
+     * @param porudzbina kojoj pripada stavka 
+     * @param rb redni broj stavke kao integer
+     * @param kolicina proizvoda kao integer
+     * @param cena stavke kao double
+     * @param proizvod od kojeg se sastoji stavka
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost za porudzbinu ili proizvod
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena pozitivna vrednnost za kolicinu ili cenu 
+     */
     public StavkaPorudzbine(Porudzbina porudzbina, int rb, int kolicina, double cena, Proizvod proizvod) {
        
         setPorudzbina(porudzbina);
@@ -129,10 +157,20 @@ public class StavkaPorudzbine extends AbstractDomainObject {
         return " WHERE P.PORUDZBINAID = " + porudzbina.getPorudzbinaID();
     }
 
+    
+    /**
+     * vraca porudzbinu kojoj pripada stavka
+     * @return porudzbina konkretne stavke
+     */
     public Porudzbina getPorudzbina() {
         return porudzbina;
     }
-
+    
+    /**
+     * postavlja atribut porudzbina na zeljenu vrednost
+     * @param porudzbina kojoj pripada stavka
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     */
     public void setPorudzbina(Porudzbina porudzbina) {
     	if(porudzbina==null) {
     		throw new NullPointerException("porudzbina ne sme biti null");
@@ -140,19 +178,37 @@ public class StavkaPorudzbine extends AbstractDomainObject {
         this.porudzbina = porudzbina;
     }
 
+    
+    /**
+     * vraca trenutnu vrednost atributa rb
+     * @return rb konkretne stavke
+     */
     public int getRb() {
         return rb;
     }
 
+    /**
+     * postavlja atribut rb na zeljenu vrednost
+     * @param rb rednibroj stavke kao integer
+     */
     public void setRb(int rb) {
     	//nemam proveru vrednosti jer mi je rb autoincrement u bazi znaci ja ne zadajem vrednost
         this.rb = rb;
     }
 
+    /**
+     * vraca trenutnu vrednost atributa kolicina
+     * @return kolicina proizvoda kao integer
+     */
     public int getKolicina() {
         return kolicina;
     }
 
+    /**
+     * postavlja atribut kolicina na zeljenu vrednost
+     * @param kolicina konkretnog proizvoda stavke kao integer
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjen pozitivan broj
+     */
     public void setKolicina(int kolicina) {
     	if(kolicina<=0) {
     		throw new IllegalArgumentException("kolicina mora biti pozitivna");
@@ -160,10 +216,20 @@ public class StavkaPorudzbine extends AbstractDomainObject {
         this.kolicina = kolicina;
     }
 
+    
+    /**
+     * vraca trenutnu vrednost atributa cena
+     * @return cena konkretne stavke kao double
+     */
     public double getCena() {
         return cena;
     }
 
+    /**
+     * postavlja vrednost atributa cena konkretne stavke 
+     * @param cena stavke kao double
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena pozitivna vrednost
+     */
     public void setCena(double cena) {
     	if(cena<=0) {
     		throw new IllegalArgumentException("cena mora biti pozitivna");
@@ -171,10 +237,20 @@ public class StavkaPorudzbine extends AbstractDomainObject {
         this.cena = cena;
     }
 
+    
+    /**
+     * vraca Proizvod od kojeg se sastoji sama stavka
+     * @return proizvod stavke
+     */
     public Proizvod getProizvod() {
         return proizvod;
     }
 
+    /**
+     * postavlja proizvod stavke
+     * @param proizvod stavke 
+     * @throws java.lang.IllegalArgumentException ukoliko je prosledjena null vrednost
+     */
     public void setProizvod(Proizvod proizvod) {
     	if(proizvod==null) {
     		throw new IllegalArgumentException("proizvod ne sme biit null");
@@ -194,6 +270,12 @@ public class StavkaPorudzbine extends AbstractDomainObject {
 
 
 
+	/**
+	 * poredi dve stavke po svim atributima
+	 * @param obj  StavkaPorudzbine sa kojom se poredi
+	 * @return true - ukoliko su im svi atributi jednaki
+	 * @return false - u svim suprotnim situacijama
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

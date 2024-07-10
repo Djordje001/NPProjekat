@@ -13,16 +13,33 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- *
+ *predstavlja autora konkretne knjige i ima podatke konkretnog pisca
  * @author Lenovo
  */
 public class Autor extends AbstractDomainObject {
 
-	
+	/**
+	 * Knjiga kojoj pripada konkretni autor
+	 */
     private Knjiga knjiga;
+    
+    /**
+     * redni broj konkretnog autora kao integer vrednost
+     */
     private int rb;
+    
+    /**
+     * Pisac knjige cije podatke uzima konkretni autor
+     */
     private Pisac pisac;
 
+    /**
+     * postavlja zeljene vrednosti svim atributima autora 
+     * @param knjiga kojoj pripada autor
+     * @param rb redni broj autora
+     * @param pisac knjige
+     * @throws java.lang.NullPointerException ukoliko se prosledi null za knjigu ili pisca
+     */
     public Autor(Knjiga knjiga, int rb, Pisac pisac) {
       
         setKnjiga(knjiga);
@@ -102,10 +119,19 @@ public class Autor extends AbstractDomainObject {
     	return "WHERE A.PROIZVODID = " + knjiga.getProizvodID();
     }
 
+    /**
+     * Vraca kojoj knjizi pripada konkretni autor
+     * @return knjiga autora
+     */
     public Knjiga getKnjiga() {
         return knjiga;
     }
 
+    /**
+     * postavlja knjigu kojoj pripada konkretni autor
+     * @param knjiga autora
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     */
     public void setKnjiga(Knjiga knjiga) {
     	if(knjiga==null) {
     		throw new NullPointerException("knjiga ne sme biti null");
@@ -113,19 +139,36 @@ public class Autor extends AbstractDomainObject {
         this.knjiga = knjiga;
     }
 
+    /**
+     * vraca trenutnu vrednost rednog broja autora 
+     * @return rb redni broj autora kao int
+     */
     public int getRb() {
         return rb;
     }
 
+    /**
+     * postavlja atribut rb na zeljenu vrednost 
+     * @param rb redni broj autora kao int
+     */
     public void setRb(int rb) {
     	//nemam nedozvoljene vrednosti jer mi je rb autoincrement u bazi i samim tim ja ne rukovodim koju vrednostu unosim
         this.rb = rb;
     }
 
+    /**
+     * vraca pisca kome pripada konkretni autor knjige
+     * @return pisac 
+     */
     public Pisac getPisac() {
         return pisac;
     }
 
+    /**
+     * Postavlja pisca na zeljenu vrednost
+     * @param pisac kome pripada konkretni autor
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     */
     public void setPisac(Pisac pisac) {
     	if(pisac==null) {
     		throw new NullPointerException("Pisac ne sme biti null");
@@ -140,6 +183,12 @@ public class Autor extends AbstractDomainObject {
 
 	
 
+	/**
+	 * poredi dva autora po svim atributima
+	 * @param obj Autor sa kojim se poredi
+	 * @return true-ako drugi autor ima sve iste atribute 
+	 * @return false-u svim ostalim situacijama
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

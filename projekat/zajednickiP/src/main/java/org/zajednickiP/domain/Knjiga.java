@@ -4,10 +4,26 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
-
+/**
+ * predstavlja knjigu sa atributima izdanje,opis i autori
+ * nasledjuje klazu proizvod
+ * @author Lenovo
+ *
+ */
 public class Knjiga extends Proizvod{
+	/**
+	 * izdanje knjige kao integer vrednost
+	 */
 	private int izdanje;
+	
+	/**
+	 * kratak opis Knjige kao String
+	 */
 	private String opis;
+	
+	/**
+	 * lista autora knjige
+	 */
 	private ArrayList<Autor> autori;
 	
 	
@@ -15,7 +31,18 @@ public class Knjiga extends Proizvod{
 	
 	
 	
-
+	/**
+	 * postavlja sve atribute knjige na zeljene vrednosti
+	 * @param proizvodID id proizvoda kao Long
+	 * @param cena proizvoda Double
+	 * @param naziv proizvoda kao String
+	 * @param tip proizvoda kao Int
+	 * @param izdanje knjige kao int
+	 * @param opis knjige kao String
+	 * @param autori knjige kao lista
+	 * @throws java.lang.IllegalArgumentException ukoliko je za tip prosledjena vrednost razlicita od 2,ili ako nije prosledjena pozitivna vrednost za cenu ili izdanje
+	 * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost za naziv ili opis ili za autore
+	 */
 	public Knjiga(Long proizvodID, double cena, String naziv,int tip,int izdanje,String opis,ArrayList<Autor> autori) {
 		super(proizvodID, cena, naziv,tip);
 		if(tip!=2) {
@@ -36,6 +63,10 @@ public class Knjiga extends Proizvod{
 
 
 
+	/**
+	 * vraca trenutnu vrednost atributa izdanje knjige
+	 * @return izdanje knjige kao int
+	 */
 	public int getIzdanje() {
 		return izdanje;
 	}
@@ -43,6 +74,11 @@ public class Knjiga extends Proizvod{
 
 
 
+	/**
+	 * postavlja atribut izdanje na zeljenu vrednost
+	 * @param izdanje knjige kao integer
+	 * @throws java.lang.IllegalArgumentException ukoliko nije poslata pozitivna vrednost
+	 */
 	public void setIzdanje(int izdanje) {
 		if(izdanje<=0) {
 			throw new IllegalArgumentException("izdanje mora biti vece od 0");
@@ -53,6 +89,10 @@ public class Knjiga extends Proizvod{
 
 
 
+	/**
+	 * vraca trenutnu vrednost atributa opis
+	 * @return opis knjige kao String
+	 */
 	public String getOpis() {
 		return opis;
 	}
@@ -60,6 +100,12 @@ public class Knjiga extends Proizvod{
 
 
 
+	/**
+	 * postavlja opis knjige na zeljenu vrednost
+	 * @param opis knjige kao String
+	 * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+	 * @throws java.lang.IllegalArgumentException ukoliko je prosledjen prazan string
+	 */
 	public void setOpis(String opis) {
 		if(opis==null) {
 			throw new NullPointerException("opis ne sme biti null");
@@ -74,6 +120,10 @@ public class Knjiga extends Proizvod{
 
 
 
+	/**
+	 * vraca listu autora konkretne knjige
+	 * @return autori -listu autora konkretne knjige
+	 */
 	public ArrayList<Autor> getAutori() {
 		return autori;
 	}
@@ -81,6 +131,11 @@ public class Knjiga extends Proizvod{
 
 
 
+	/**
+	 * postavlja autore konkretne knjige na zeljenu vrednost
+	 * @param autori knjige kao Lista
+	 * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+	 */
 	public void setAutori(ArrayList<Autor> autori) {
 		//ne radim proveru da li su autori prazna lista jer postoje knjige kod kojih se ne znaju autori samim tim moze lista da bude prazna
 		if(autori==null) {
@@ -174,6 +229,12 @@ public class Knjiga extends Proizvod{
 
 
 
+	/**
+	 * poredi dve knjige po svim atributima
+	 * @param obj knjiga sa kojim se poredi
+	 * @return true ukoliko druga knjiga ima sve iste atribute
+	 * @return false u svim ostalim sitaucijama
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

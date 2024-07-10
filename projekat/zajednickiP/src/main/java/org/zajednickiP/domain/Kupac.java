@@ -11,15 +11,33 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 /**
- *
+ * predstavlja konkretnog kupca sa atributima kupacID,ime,prezime,email,tipKupca
  * @author Lenovo
  */
 public class Kupac extends AbstractDomainObject {
-    
+    /**
+     * id kupca kao Long
+     */
     private Long kupacID;
+    
+    /**
+     * ime kupca kao String
+     */
     private String ime;
+    
+    /**
+     * prezime kupca kao String
+     */
     private String prezime;
+    
+    /**
+     * email kupca kao String
+     */
     private String email;
+    
+    /**
+     * tipKupca kao String
+     */
     private String tipKupca;
 
     @Override
@@ -27,6 +45,16 @@ public class Kupac extends AbstractDomainObject {
         return ime + " " + prezime + " (Tip: " + tipKupca + ")";
     }
 
+    /**
+     * postavlja atribute Kupca na zeljene vrednost
+     * @param kupacID id kupca kao long
+     * @param ime kupca kao String
+     * @param prezime kupca kao String
+     * @param email kupca kao String
+     * @param tipKupca kupca kao String
+     * @throws java.lang.NullPointerException ukoliko se prosledi null vrednost za ime ili prezime ili email ili tip Kucpca
+     * @throws java.lang.IllegalArgumentException ukoliko se prosledi prazan string za ime,prezime,email ili tipKupca
+     */
     public Kupac(Long kupacID, String ime, String prezime, String email, String tipKupca) {
        
         setKupacID(kupacID);
@@ -100,18 +128,37 @@ public class Kupac extends AbstractDomainObject {
         return "";
     }
 
+    
+    /**
+     * vraca trenutnu vrednost atributa kupacID
+     * @return kupacID kao Long
+     */
     public Long getKupacID() {
         return kupacID;
     }
 
+    /**
+     * postavlja vrednost atributa kupacID na zeljenu vrednost
+     * @param kupacID kao Long
+     */
     public void setKupacID(Long kupacID) {
         this.kupacID = kupacID;
     }
 
+    /**
+     * vraca trenutnu vrednost atributa ime kupca
+     * @return ime kupca kao String
+     */
     public String getIme() {
         return ime;
     }
 
+    /**
+     * postavlja vrednost atributa ime na zeljenu vrednost
+     * @param ime kupca kao String
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko je prosledjen prazan string
+     */
     public void setIme(String ime) {
     	if(ime==null) {
     		throw new NullPointerException("ime ne sme biti null");
@@ -122,10 +169,20 @@ public class Kupac extends AbstractDomainObject {
         this.ime = ime;
     }
 
+    /**
+     * vraca trenutnu vrednost atributa prezime
+     * @return prezime kupca kao string
+     */
     public String getPrezime() {
         return prezime;
     }
 
+    /**
+     * postavlja atribut prezime na zeljenu vrednost
+     * @param prezime kupca kao String
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko je prosledjen prazan string
+     */
     public void setPrezime(String prezime) {
     	if(prezime==null) {
     		throw new NullPointerException("prezime ne sme biti null");
@@ -136,10 +193,20 @@ public class Kupac extends AbstractDomainObject {
         this.prezime = prezime;
     }
 
+    /**
+     * vraca trenutnu vrednost atributa email kupca
+     * @return email kupca kao String
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * postavlja email kupca na zeljenu vrednost
+     * @param email kupca kao String
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko je prosledjen prazan string
+     */
     public void setEmail(String email) {
     	if(email==null) {
     		throw new NullPointerException("email ne sme biti null");
@@ -150,10 +217,20 @@ public class Kupac extends AbstractDomainObject {
         this.email = email;
     }
 
+    /**
+     * vraca trenutnu vrednost atributa tip kupca
+     * @return tipKupca kao String
+     */
     public String getTipKupca() {
         return tipKupca;
     }
 
+    /**
+     * postavlja atribut tipKupca na zeljenu vrednost
+     * @param tipKupca kao String
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko je prosledjen prazan string
+     */
     public void setTipKupca(String tipKupca) {
     	if(tipKupca==null) {
     		throw new NullPointerException("tipKupca ne sme biti null");
@@ -166,6 +243,12 @@ public class Kupac extends AbstractDomainObject {
 
 	
 
+    /**
+     * poredi dva kupca po svim atributima
+     * @param obj Kupac sa kojim se poredi
+     * @return true - ukoliko drugi kupac ima sve iste atribute
+     * @return false - u svim ostalim situacijama
+     */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
