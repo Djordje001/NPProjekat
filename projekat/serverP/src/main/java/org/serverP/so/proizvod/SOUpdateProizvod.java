@@ -21,11 +21,20 @@ import org.zajednickiP.domain.Proizvod;
 
 
 /**
- *
+ * ova klasa predstavlja sistemsku operaciju za azuriranje proizvoda
+ * azurira se i jedan red u tabeli Knjiga ili KancelarijskiProizvod u zavinosti od tipa,
+ * ukoliko se azruira red u tabeli knjige  prvo ce se izbrisati svi prethodni autori knjige i onda ce se dodati novi(ako postoje)
  * @author Lenovo
  */
 public class SOUpdateProizvod extends AbstractSO {
 
+	
+	 /**
+     * ova metoda ce ispitati da li je apstraktni domenski objekat validan
+     * @param ado apstraktni domenski objekat nad kojim vrsimo validaciju
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena instanca klase Proizvod
+     */
     @Override
     protected void validate(AbstractDomainObject ado) throws Exception {
     	if(ado==null) {
@@ -39,6 +48,15 @@ public class SOUpdateProizvod extends AbstractSO {
 
     }
 
+    
+    
+    /**
+     * ova metoda treba da izvrsi sistemsku operaciju azuriranja proizvoda u bazi ,
+     * azurirace se i jedan red u tabeli KancelarijskiProizvod ili Knjiga u zavisnosti od tipa,
+     * ukoliko se azurira red u tabeli Knjiga prvo ce se izbrisati svi prethodni autori knjige i onda ce se dodati novi
+     * @param ado apstraktni domenski objekat nad kojim se izvrsava SO
+     * @throws java.lang.Exception ukoliko dodje do kreske prilikom izvrsavanja upita u bazi
+     */
     @Override
     protected void execute(AbstractDomainObject ado) throws Exception {
 

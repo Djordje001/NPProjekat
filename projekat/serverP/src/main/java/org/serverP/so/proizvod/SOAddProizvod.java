@@ -16,11 +16,20 @@ import org.zajednickiP.domain.Proizvod;
 import org.zajednickiP.domain.StavkaPorudzbine;
 
 /**
- *
+ *  ova klasa predstavlja sistemsku operaciju za dodavanje proizvoda
+ *  dodace se red u tabeli Proizvod i jedan red u tabeli Knjiga ili KancelarijskiProizvod u zavisnosti od tipa,
+ *  ukoliko se dodaje red u tabeli Knjiga dodace se i redovi u tabeli Autori(ako postoje autori za unetu knjigu)
  * @author Lenovo
  */
 public class SOAddProizvod extends AbstractSO {
 
+	
+	/**
+     * ova metoda ce ispitati da li je apstraktni domenski objekat validan
+     * @param ado apstraktni domenski objekat nad kojim vrsimo validaciju
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena instanca klase Proizvod
+     */
     @Override
     protected void validate(AbstractDomainObject ado) throws Exception {
     	if(ado==null) {
@@ -34,6 +43,14 @@ public class SOAddProizvod extends AbstractSO {
 
     }
 
+    
+    /**
+     * ova metoda treba da izvrsi sistemsku operaciju dodavanja proizvoda u bazu pozivanjem insert metode naseg DBBrokera,
+     * takodje dodace se i red u tabeli Knjiga ili KancelarijskiMaterijal u zavinosti od tipa
+     * ukoliko se dodaje red u tabeli knjiga dodace se i redovi u tabeli Autor(ukoliko postoje autori za konkretnu knjigu)
+     * @param ado apstraktni domenski objekat nad kojim se izvrsava SO
+     * @throws java.lang.Exception ukoliko dodje do kreske prilikom izvrsavanja upita u bazi
+     */
     @Override
     protected void execute(AbstractDomainObject ado) throws Exception {
     	Proizvod proizvod=(Proizvod)ado;

@@ -14,11 +14,17 @@ import org.zajednickiP.domain.AbstractDomainObject;
 import org.zajednickiP.domain.Kupac;
 
 /**
- *
+ * ova klasa predstavlja sismtesku operaciju za dodavanje novog kupca
  * @author Lenovo
  */
 public class SOAddKupac extends AbstractSO {
 
+	/**
+     * ova metoda ce ispitati da li je apstraktni domenski objekat validan
+     * @param ado apstraktni domenski objekat nad kojim vrsimo validaciju
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena instanca klase Kupac ili ako u bazi postoji vec kupac sa zeljenim mejlom
+     */
     @Override
     protected void validate(AbstractDomainObject ado) throws Exception {
     	
@@ -41,6 +47,11 @@ public class SOAddKupac extends AbstractSO {
 
     }
 
+    /**
+     * ova metoda treba da izvrsi sistemsku operaciju dodavanja kupca u bazu pozivanjem insert metode naseg DBBrokera
+     * @param ado apstraktni domenski objekat nad kojim se izvrsava SO
+     * @throws java.lang.Exception ukoliko dodje do kreske prilikom izvrsavanja upita u bazi
+     */
     @Override
     protected void execute(AbstractDomainObject ado) throws Exception {
         DBBroker.getInstance().insert(ado);

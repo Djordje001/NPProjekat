@@ -30,11 +30,17 @@ import com.google.gson.JsonObject;
 
 
 /**
- *
+ * ova klasa predstavlja sistemsku operaciju za dodavanje porudzbine u bazu i svih njenih stavki
  * @author Lenovo
  */
 public class SOAddPorudzbina extends AbstractSO {
 
+	/**
+     * ova metoda ce ispitati da li je apstraktni domenski objekat validan
+     * @param ado apstraktni domenski objekat nad kojim vrsimo validaciju
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena instanca klase Porudzbina ili ako porudzbina nema nijednu stavku
+     */
     @Override
     protected void validate(AbstractDomainObject ado) throws Exception {
     	if(ado==null) {
@@ -48,18 +54,16 @@ public class SOAddPorudzbina extends AbstractSO {
             throw new IllegalArgumentException("Porudzbina mora imati barem jednu stavku!");
         }
 
-       /* Porudzbina p = (Porudzbina) ado;
-
-        if (!p.getDatumIsporuke().after(new Date())) {
-            throw new Exception("Datum isporuke mora biti u buducnosti!");
-        }
-
-        if (p.getStavkePorudzbine().isEmpty()) {
-            throw new Exception("Porudzbina mora imati barem jednu stavku!");
-        }*/
+       
 
     }
 
+    /**
+     * ova metoda treba da izvrsi sistemsku operaciju dodavanja porudzbine u bazu pozivanjem insert metode naseg DBBrokera,
+     * takodje i za svaku stavkuPorudzbine pozivace se metoda insert naseg dbBrokera 
+     * @param ado apstraktni domenski objekat nad kojim se izvrsava SO
+     * @throws java.lang.Exception ukoliko dodje do kreske prilikom izvrsavanja upita u bazi
+     */
     @Override
     protected void execute(AbstractDomainObject ado) throws Exception {
         

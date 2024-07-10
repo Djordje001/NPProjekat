@@ -17,11 +17,18 @@ import org.zajednickiP.domain.StavkaPorudzbine;
 
 
 /**
- *
+ *  ova klasa prestavlja sistemsku operaciju za azuriranje zeljene porudzbine i njenih stavki
  * @author Lenovo
  */
 public class SOUpdatePorudzbina extends AbstractSO {
 
+	
+	/**
+     * ova metoda ce ispitati da li je apstraktni domenski objekat validan
+     * @param ado apstraktni domenski objekat nad kojim vrsimo validaciju
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena instanca klase Porudzbina ili ako porudzbina nema nijednu stavku
+     */
     @Override
     protected void validate(AbstractDomainObject ado) throws Exception {
     	if(ado==null) {
@@ -36,18 +43,17 @@ public class SOUpdatePorudzbina extends AbstractSO {
             throw new IllegalArgumentException("Porudzbina mora imati barem jednu stavku!");
         }
 
-       /* Porudzbina p = (Porudzbina) ado;
-
-        if (!p.getDatumIsporuke().after(new Date())) {
-            throw new Exception("Datum isporuke mora biti u buducnosti!");
-        }
-
-        if (p.getStavkePorudzbine().isEmpty()) {
-            throw new Exception("Porudzbina mora imati barem jednu stavku!");
-        }*/
+       
 
     }
 
+    
+    /**
+     * ova metoda treba da izvrsi sistemsku operaciju azuriranja porudzbine u bazi pozivanjem update metode naseg DBBrokera
+     * ova metoda ce takodje prvo izbrisati sve prethodne stavke ove porudzbine pozivanjem metode delete DBBrokera i onda ce naknadno svaku novu dodati pomocu insert metode DBBrokera
+     * @param ado apstraktni domenski objekat nad kojim se izvrsava SO
+     * @throws java.lang.Exception ukoliko dodje do kreske prilikom izvrsavanja upita u bazi
+     */
     @Override
     protected void execute(AbstractDomainObject ado) throws Exception {
 

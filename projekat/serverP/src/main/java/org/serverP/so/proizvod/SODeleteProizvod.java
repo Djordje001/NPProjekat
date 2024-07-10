@@ -12,11 +12,20 @@ import org.zajednickiP.domain.Porudzbina;
 import org.zajednickiP.domain.Proizvod;
 
 /**
- *
+ * ova klasa predstavlja sistemsku operaciju za brisanje zeljenog proizvoda
+ * izbrisace se jedan red u tabeli proizvod i jedan red u tabeli KancelarijskiProizvid ili Knjiga u zavinosti od tipa 
+ * takodje ukoliko se brise red iz tabele knjiga izbrisace se i svi redovi u tabeli Autor koji odgovoaraju toj knjizi
  * @author Lenovo
  */
 public class SODeleteProizvod extends AbstractSO {
 
+	
+	/**
+     * ova metoda ce ispitati da li je apstraktni domenski objekat validan
+     * @param ado apstraktni domenski objekat nad kojim vrsimo validaciju
+     * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena instanca klase Proizvod
+     */
     @Override
     protected void validate(AbstractDomainObject ado) throws Exception {
     	if(ado==null) {
@@ -27,6 +36,13 @@ public class SODeleteProizvod extends AbstractSO {
         }
     }
 
+    
+    /**
+     * ova metoda treba da izvrsi sistemsku operaciju brisanja zeljenog proizvoda u bazi pozivanjem delete metode naseg DBBrokera,
+     * automatski ce se obrisati red u tabeli Knjiga ili KancelarijskiProizvod u zavinosti od tipa ,ukoliko se brise knjiga obrisace se i svi redovi u tabeli autor koji odgovaraju toj knjizi
+     * @param ado apstraktni domenski objekat nad kojim se izvrsava SO
+     * @throws java.lang.Exception ukoliko dodje do kreske prilikom izvrsavanja upita u bazi
+     */
     @Override
     protected void execute(AbstractDomainObject ado) throws Exception {
     	Proizvod p=(Proizvod)ado;
