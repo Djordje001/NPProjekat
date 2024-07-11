@@ -6,6 +6,8 @@
 package org.serverP.so.proizvod;
 
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -81,7 +83,24 @@ public class SOUpdateProizvod extends AbstractSO {
         	ArrayList<Autor> autori=k.getAutori();
         	for(Autor autor : autori) {
         		autor.setKnjiga(k);
-        		DBBroker.getInstance().insert(autor);
+        		//DBBroker.getInstance().insert(autor);
+        		
+        		
+        		
+        		
+        		
+        		
+        		PreparedStatement kec=  DBBroker.getInstance().insert(autor);
+   		     
+   		     
+   		     
+		        
+		        
+		        ResultSet forica = kec.getGeneratedKeys();
+		        forica.next();
+		        long rb = forica.getLong(1);
+		     int y=(int) rb;
+		        autor.setRb(y);
         	}
         }
        

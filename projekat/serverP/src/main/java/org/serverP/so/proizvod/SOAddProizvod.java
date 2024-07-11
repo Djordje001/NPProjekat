@@ -69,6 +69,8 @@ public class SOAddProizvod extends AbstractSO {
         Long proizvodID = tableKeys.getLong(1);
         
         
+        
+        
      //  Porudzbina p = (Porudzbina) ado;
        // p.setPorudzbinaID(porudzbinaID);
         
@@ -95,7 +97,17 @@ public class SOAddProizvod extends AbstractSO {
         		ArrayList<Autor> autori=k.getAutori();
         		for(Autor autor : autori) {
         			 autor.setKnjiga(k);
-        		     DBBroker.getInstance().insert(autor);
+        			 PreparedStatement kec=  DBBroker.getInstance().insert(autor);
+        		     
+        		     
+        		     
+        		        
+        		        
+        		        ResultSet forica = kec.getGeneratedKeys();
+        		        forica.next();
+        		        long rb = forica.getLong(1);
+        		     int x=(int) rb;
+        		        autor.setRb(x);
         		}
     		
     		

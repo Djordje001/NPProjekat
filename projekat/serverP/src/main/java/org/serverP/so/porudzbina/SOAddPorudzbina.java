@@ -86,7 +86,20 @@ public class SOAddPorudzbina extends AbstractSO {
         
         for (StavkaPorudzbine stavkaPorudzbine : p.getStavkePorudzbine()) {
             stavkaPorudzbine.setPorudzbina(p);
-            DBBroker.getInstance().insert(stavkaPorudzbine);
+           // DBBroker.getInstance().insert(stavkaPorudzbine);
+            
+            
+            
+           PreparedStatement w=DBBroker.getInstance().insert(stavkaPorudzbine);
+        	
+        	ResultSet u = w.getGeneratedKeys();
+            u.next();
+            long rb = u.getLong(1);
+            
+            
+            
+		     int x=(int) rb;
+            stavkaPorudzbine.setRb(x);
         }
         
          

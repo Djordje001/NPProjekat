@@ -6,6 +6,8 @@
 package org.serverP.so.porudzbina;
 
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Date;
 
 import org.serverP.App;
@@ -69,7 +71,16 @@ public class SOUpdatePorudzbina extends AbstractSO {
 
         
         for (StavkaPorudzbine stavkaPorudzbine : p.getStavkePorudzbine()) {
-            DBBroker.getInstance().insert(stavkaPorudzbine);
+        	PreparedStatement ps=DBBroker.getInstance().insert(stavkaPorudzbine);
+        	
+        	ResultSet tableKeys = ps.getGeneratedKeys();
+            tableKeys.next();
+            long rb = tableKeys.getLong(1);
+            
+            
+            
+		     int x=(int) rb;
+            stavkaPorudzbine.setRb(x);
         }
         
         

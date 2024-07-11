@@ -96,11 +96,8 @@ public class DBBroker {
         Statement s = connection.createStatement();
         s.executeUpdate(upit);
     }
-    public void deleteAll(AbstractDomainObject ado) throws SQLException{
-    	String upit="DELETE FROM "+ado.nazivTabele();
-    	System.out.println(upit);
-    	Statement s=connection.createStatement();
-    	s.executeUpdate(upit);
-    }
+   
+    
+    
 
 }

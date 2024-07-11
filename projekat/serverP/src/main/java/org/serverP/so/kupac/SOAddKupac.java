@@ -6,6 +6,8 @@
 package org.serverP.so.kupac;
 
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import org.serverP.db.DBBroker;
@@ -54,7 +56,15 @@ public class SOAddKupac extends AbstractSO {
      */
     @Override
     protected void execute(AbstractDomainObject ado) throws Exception {
-        DBBroker.getInstance().insert(ado);
+        //DBBroker.getInstance().insert(ado);
+        
+        PreparedStatement ps=DBBroker.getInstance().insert(ado);
+        ResultSet tableKeys=ps.getGeneratedKeys();
+        tableKeys.next();
+        Long kupacID=tableKeys.getLong(1);
+        Kupac kupac=(Kupac) ado;
+        kupac.setKupacID(kupacID);
+        
     }
 
 }
