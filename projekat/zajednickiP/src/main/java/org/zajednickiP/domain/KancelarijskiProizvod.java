@@ -284,10 +284,9 @@ public class KancelarijskiProizvod extends Proizvod{
 			return false;
 		KancelarijskiProizvod other = (KancelarijskiProizvod) obj;
 		return super.equals(obj) &&
-				Double.doubleToLongBits(duzina) == Double.doubleToLongBits(other.duzina)
-				&& Objects.equals(proizvodjac, other.proizvodjac)
-				&& Double.doubleToLongBits(sirina) == Double.doubleToLongBits(other.sirina)
-				&& Double.doubleToLongBits(visina) == Double.doubleToLongBits(other.visina)
+				
+				 Objects.equals(proizvodjac, other.proizvodjac)
+				
 				&& Objects.equals(vrsta, other.vrsta);
 	}
 

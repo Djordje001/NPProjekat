@@ -211,8 +211,8 @@ public class Administrator extends AbstractDomainObject {
 			return false;
 		Administrator other = (Administrator) obj;
 		return Objects.equals(administratorID, other.administratorID) && Objects.equals(ime, other.ime)
-				&& Objects.equals(password, other.password) && Objects.equals(prezime, other.prezime)
-				&& Objects.equals(username, other.username);
+				 && Objects.equals(prezime, other.prezime);
+				
 	}
 
 	@Override

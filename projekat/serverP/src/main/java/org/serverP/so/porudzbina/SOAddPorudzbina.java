@@ -53,6 +53,10 @@ public class SOAddPorudzbina extends AbstractSO {
         if (p.getStavkePorudzbine().isEmpty()) {
             throw new IllegalArgumentException("Porudzbina mora imati barem jednu stavku!");
         }
+        
+        if (p.getDatumIsporuke().before(new Date())) {
+            throw new IllegalArgumentException("Porudzbina mora imati datumIsporuke u buducnosti!");
+        }
 
        
 

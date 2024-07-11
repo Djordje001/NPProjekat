@@ -266,10 +266,10 @@ public class Porudzbina extends AbstractDomainObject {
     		
     	}
     	
-    	Date trenutniDatum=new Date();
+    	/*Date trenutniDatum=new Date();
     	if(datumIsporuke.before(trenutniDatum)) {
     		throw new IllegalArgumentException("datumIsporuke mora biti u buducnosti");
-    	}
+    	}*/
         this.datumIsporuke = datumIsporuke;
     }
 
@@ -474,13 +474,8 @@ public class Porudzbina extends AbstractDomainObject {
 		if (getClass() != obj.getClass())
 			return false;
 		Porudzbina other = (Porudzbina) obj;
-		return Objects.equals(administrator, other.administrator) && Objects.equals(adresa, other.adresa)
-				&& Double.doubleToLongBits(cena) == Double.doubleToLongBits(other.cena)
-				&& Objects.equals(datumIsporuke, other.datumIsporuke) && Objects.equals(datumVreme, other.datumVreme)
-				&& Objects.equals(grad, other.grad)
-				&& Double.doubleToLongBits(konacnaCena) == Double.doubleToLongBits(other.konacnaCena)
+		return Objects.equals(administrator, other.administrator) 
 				&& Objects.equals(kupac, other.kupac)
-				&& Double.doubleToLongBits(popust) == Double.doubleToLongBits(other.popust)
 				&& Objects.equals(porudzbinaID, other.porudzbinaID);
 	}
     

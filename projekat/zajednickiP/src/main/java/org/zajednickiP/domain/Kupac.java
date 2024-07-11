@@ -235,7 +235,7 @@ public class Kupac extends AbstractDomainObject {
     	if(tipKupca==null) {
     		throw new NullPointerException("tipKupca ne sme biti null");
     	}
-    	if(ime.equals("")) {
+    	if(tipKupca.equals("")) {
     		throw new IllegalArgumentException("tipKupca ne sme biti prazna string");
     	}
         this.tipKupca = tipKupca;
@@ -258,9 +258,8 @@ public class Kupac extends AbstractDomainObject {
 		if (getClass() != obj.getClass())
 			return false;
 		Kupac other = (Kupac) obj;
-		return Objects.equals(email, other.email) && Objects.equals(ime, other.ime)
-				&& Objects.equals(kupacID, other.kupacID) && Objects.equals(prezime, other.prezime)
-				&& Objects.equals(tipKupca, other.tipKupca);
+		return Objects.equals(email, other.email) 
+				&& Objects.equals(kupacID, other.kupacID) ;
 	}
     
     

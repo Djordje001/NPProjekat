@@ -253,7 +253,7 @@ public class StavkaPorudzbine extends AbstractDomainObject {
      */
     public void setProizvod(Proizvod proizvod) {
     	if(proizvod==null) {
-    		throw new IllegalArgumentException("proizvod ne sme biit null");
+    		throw new NullPointerException("proizvod ne sme biit null");
     	}
         this.proizvod = proizvod;
     }
@@ -285,8 +285,8 @@ public class StavkaPorudzbine extends AbstractDomainObject {
 		if (getClass() != obj.getClass())
 			return false;
 		StavkaPorudzbine other = (StavkaPorudzbine) obj;
-		return Double.doubleToLongBits(cena) == Double.doubleToLongBits(other.cena) && kolicina == other.kolicina
-				&& Objects.equals(porudzbina, other.porudzbina) && Objects.equals(proizvod, other.proizvod)
+		return 
+				Objects.equals(porudzbina, other.porudzbina)
 				&& rb == other.rb;
 	}
     

@@ -223,8 +223,8 @@ public class Pisac extends AbstractDomainObject {
 		if (getClass() != obj.getClass())
 			return false;
 		Pisac other = (Pisac) obj;
-		return Objects.equals(email, other.email) && Objects.equals(ime, other.ime)
-				&& Objects.equals(pisacID, other.pisacID) && Objects.equals(prezime, other.prezime);
+		return Objects.equals(email, other.email) 
+				&& Objects.equals(pisacID, other.pisacID);
 	}
     
     

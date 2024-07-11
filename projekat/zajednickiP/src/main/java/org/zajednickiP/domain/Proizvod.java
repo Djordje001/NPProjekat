@@ -237,9 +237,8 @@ public class Proizvod extends AbstractDomainObject {
 		if (getClass() != obj.getClass())
 			return false;
 		Proizvod other = (Proizvod) obj;
-		return Double.doubleToLongBits(cena) == Double.doubleToLongBits(other.cena)
-				&& Objects.equals(naziv, other.naziv) && Objects.equals(proizvodID, other.proizvodID)
-				&& tip == other.tip;
+		return  Objects.equals(proizvodID, other.proizvodID);
+				
 	}
 
 	
