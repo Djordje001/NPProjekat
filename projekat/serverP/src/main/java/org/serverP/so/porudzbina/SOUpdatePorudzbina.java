@@ -29,7 +29,7 @@ public class SOUpdatePorudzbina extends AbstractSO {
      * ova metoda ce ispitati da li je apstraktni domenski objekat validan
      * @param ado apstraktni domenski objekat nad kojim vrsimo validaciju
      * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
-     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena instanca klase Porudzbina ili ako porudzbina nema nijednu stavku
+     * @throws java.lang.IllegalArgumentException ukoliko nije prosledjena instanca klase Porudzbina ili ako porudzbina nema nijednu stavku ili ako porudzbina ima datumIsporuke u proslosti
      */
     @Override
     protected void validate(AbstractDomainObject ado) throws Exception {
