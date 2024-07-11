@@ -209,7 +209,7 @@ public class Pisac extends AbstractDomainObject {
 
 	
     /**
-     * poredi dva pisca po svim atributima
+     * poredi dva pisca po atributima:email,pisacID
      * @param obj Pisac sa kojim se poredi
      * @return true -ukoliko imaju sve jednake atribute
      * @return false - u svim suprotnim situacijama

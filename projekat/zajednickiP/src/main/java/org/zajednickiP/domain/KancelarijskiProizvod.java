@@ -268,7 +268,7 @@ public class KancelarijskiProizvod extends Proizvod{
 	/**
 	 * poredi dva kancelarijska proizvoda
 	 * 
-	 * poredjenje se radi prema svim atributima
+	 * poredjenje se radi prema atributima:proizvodjac,vrsta i proizvodID u nadtipu
 	 * 
 	 * @param obj KancelarijskiProizvod sa kojim se poredi
 	 * @return true ukoliko drugi par ima sve iste atribute

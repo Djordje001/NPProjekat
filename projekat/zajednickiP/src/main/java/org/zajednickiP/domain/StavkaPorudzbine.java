@@ -271,7 +271,7 @@ public class StavkaPorudzbine extends AbstractDomainObject {
 
 
 	/**
-	 * poredi dve stavke po svim atributima
+	 * poredi dve stavke po atributima:Porudzbina i rb
 	 * @param obj  StavkaPorudzbine sa kojom se poredi
 	 * @return true - ukoliko su im svi atributi jednaki
 	 * @return false - u svim suprotnim situacijama

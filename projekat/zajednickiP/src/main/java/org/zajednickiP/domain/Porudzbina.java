@@ -86,7 +86,7 @@ public class Porudzbina extends AbstractDomainObject {
      * @param administrator koji je kreirao porudzbinu
      * @param stavkePorudzbine lista stavki porudzbina
      * @throws java.lang.NullPointerException ukoliko se prosledi null vrednost za datumVreme ili datumIsporuke ili grad ili adresu ili kupca ili administratora ili za stavke
-     * @throws java.lang.IllegalArgumentException ukoliko se prosledi datum u proslosti za datumIsporuke,ili prazan string za grad ili adresu ili se za cenu ne prosledi pozitivan broj ili se za popust prosledi negativan broj ili se za konacnu cenu ne prosledi pozitivan broj
+     * @throws java.lang.IllegalArgumentException ukoliko se prosledi  prazan string za grad ili adresu ili se za cenu ne prosledi pozitivan broj ili se za popust prosledi negativan broj ili se za konacnu cenu ne prosledi pozitivan broj
      */
     public Porudzbina(Long porudzbinaID, Date datumVreme, Date datumIsporuke, String grad, String adresa, double cena, double popust, double konacnaCena, Kupac kupac, Administrator administrator, ArrayList<StavkaPorudzbine> stavkePorudzbine) {
       
@@ -258,7 +258,7 @@ public class Porudzbina extends AbstractDomainObject {
      * postavlja atribut datumIsporuke na zeljenu vrednost
      * @param datumIsporuke kad porudzbina treba biti isporucena
      * @throws java.lang.NullPointerException ukoliko je prosledjena null vrednost
-     * @throws java.lang.IllegalArgumentException ukoliko je prosledjene vreme u proslosti
+     * 
      */
     public void setDatumIsporuke(Date datumIsporuke) {
     	if(datumIsporuke==null) {
@@ -460,7 +460,7 @@ public class Porudzbina extends AbstractDomainObject {
 
 
     /**
-     * poredi dva porudzbine po svim atributima
+     * poredi dva porudzbine po atributima:administrator,kupac i porudzbina ID
      * @param obj porudbzina sa kojom se poredi
      * @return true - ukoliko su im svi atributi jednaki
      * @return false - u svim surpotnim situacijama

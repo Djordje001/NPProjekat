@@ -196,7 +196,7 @@ public class Administrator extends AbstractDomainObject {
 	/**
 	 * Poredi dva administratora
 	 * 
-	 * Poredjenje se radi prema svim atributima
+	 * Poredjenje se radi prema administratorID,imenu i prezimenu
 	 * @param obj Administrator sa kojim se poredi
 	 * @return true- ako drugi administrator ima sve iste atribute kao prvi
 	 * @return false-u svim drugim situacijama

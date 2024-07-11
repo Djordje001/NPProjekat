@@ -244,7 +244,7 @@ public class Kupac extends AbstractDomainObject {
 	
 
     /**
-     * poredi dva kupca po svim atributima
+     * poredi dva kupca po atributima:email,kupacID
      * @param obj Kupac sa kojim se poredi
      * @return true - ukoliko drugi kupac ima sve iste atribute
      * @return false - u svim ostalim situacijama

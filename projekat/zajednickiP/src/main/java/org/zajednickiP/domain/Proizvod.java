@@ -223,9 +223,9 @@ public class Proizvod extends AbstractDomainObject {
 	}
 	
 	/**
-	 * poredi dva proizvoda po svim atributima
+	 * poredi dva proizvoda po atributu:proizvodID
 	 * @param obj Proizvod sa kojim se poredi.
-	 * @return true -ako je drugi proizvod ima sve iste atribute
+	 * @return true -ako je drugi proizvod ima isti proizvodID
 	 * @return false - u svim ostalim situacijama
 	 */
 	@Override
