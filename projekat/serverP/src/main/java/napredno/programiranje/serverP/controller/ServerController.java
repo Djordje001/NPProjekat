@@ -3,38 +3,38 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.serverP.controller;
+package napredno.programiranje.serverP.controller;
 
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import org.serverP.so.administrator.SOGetAllAdministrator;
-import org.serverP.so.autor.SOFindAllAutor;
-import org.serverP.so.kupac.SOAddKupac;
-import org.serverP.so.kupac.SOGetAllKupac;
-import org.serverP.so.login.SOLogin;
-import org.serverP.so.pisac.SOGetAllPisac;
-import org.serverP.so.porudzbina.SOAddPorudzbina;
-import org.serverP.so.porudzbina.SODeletePorudzbina;
-import org.serverP.so.porudzbina.SOFindAllPorudzbina;
-import org.serverP.so.porudzbina.SOGetAllPorudzbina;
-import org.serverP.so.porudzbina.SOUpdatePorudzbina;
-import org.serverP.so.proizvod.SOAddProizvod;
-import org.serverP.so.proizvod.SODeleteProizvod;
-import org.serverP.so.proizvod.SOFindAllProizvod;
-import org.serverP.so.proizvod.SOGetAllProizvod;
-import org.serverP.so.proizvod.SOUpdateProizvod;
-import org.serverP.so.stavkaPorudzbine.SOFindAllStavkaPorudzbine;
-import org.zajednickiP.domain.Administrator;
-import org.zajednickiP.domain.Autor;
-import org.zajednickiP.domain.Knjiga;
-import org.zajednickiP.domain.Kupac;
-import org.zajednickiP.domain.Pisac;
-import org.zajednickiP.domain.Porudzbina;
-import org.zajednickiP.domain.Proizvod;
-import org.zajednickiP.domain.StavkaPorudzbine;
+import napredno.programiranje.serverP.so.administrator.SOGetAllAdministrator;
+import napredno.programiranje.serverP.so.autor.SOFindAllAutor;
+import napredno.programiranje.serverP.so.kupac.SOAddKupac;
+import napredno.programiranje.serverP.so.kupac.SOGetAllKupac;
+import napredno.programiranje.serverP.so.login.SOLogin;
+import napredno.programiranje.serverP.so.pisac.SOGetAllPisac;
+import napredno.programiranje.serverP.so.porudzbina.SOAddPorudzbina;
+import napredno.programiranje.serverP.so.porudzbina.SODeletePorudzbina;
+import napredno.programiranje.serverP.so.porudzbina.SOFindAllPorudzbina;
+import napredno.programiranje.serverP.so.porudzbina.SOGetAllPorudzbina;
+import napredno.programiranje.serverP.so.porudzbina.SOUpdatePorudzbina;
+import napredno.programiranje.serverP.so.proizvod.SOAddProizvod;
+import napredno.programiranje.serverP.so.proizvod.SODeleteProizvod;
+import napredno.programiranje.serverP.so.proizvod.SOFindAllProizvod;
+import napredno.programiranje.serverP.so.proizvod.SOGetAllProizvod;
+import napredno.programiranje.serverP.so.proizvod.SOUpdateProizvod;
+import napredno.programiranje.serverP.so.stavkaPorudzbine.SOFindAllStavkaPorudzbine;
+import napredno.programiranje.zajednickiP.domain.Administrator;
+import napredno.programiranje.zajednickiP.domain.Autor;
+import napredno.programiranje.zajednickiP.domain.Knjiga;
+import napredno.programiranje.zajednickiP.domain.Kupac;
+import napredno.programiranje.zajednickiP.domain.Pisac;
+import napredno.programiranje.zajednickiP.domain.Porudzbina;
+import napredno.programiranje.zajednickiP.domain.Proizvod;
+import napredno.programiranje.zajednickiP.domain.StavkaPorudzbine;
 
 
 

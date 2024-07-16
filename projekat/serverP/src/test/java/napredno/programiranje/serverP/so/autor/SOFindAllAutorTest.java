@@ -1,4 +1,4 @@
-package org.serverP.so.autor;
+package napredno.programiranje.serverP.so.autor;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,14 +9,16 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.serverP.so.AbstractSO;
-import org.serverP.so.AbstractSOTest;
-import org.serverP.so.proizvod.SOGetAllProizvod;
-import org.zajednickiP.domain.Autor;
-import org.zajednickiP.domain.Knjiga;
-import org.zajednickiP.domain.Kupac;
-import org.zajednickiP.domain.Pisac;
-import org.zajednickiP.domain.Proizvod;
+
+import napredno.programiranje.serverP.so.AbstractSO;
+import napredno.programiranje.serverP.so.AbstractSOTest;
+import napredno.programiranje.serverP.so.autor.SOFindAllAutor;
+import napredno.programiranje.serverP.so.proizvod.SOGetAllProizvod;
+import napredno.programiranje.zajednickiP.domain.Autor;
+import napredno.programiranje.zajednickiP.domain.Knjiga;
+import napredno.programiranje.zajednickiP.domain.Kupac;
+import napredno.programiranje.zajednickiP.domain.Pisac;
+import napredno.programiranje.zajednickiP.domain.Proizvod;
 
 class SOFindAllAutorTest extends AbstractSOTest {
 

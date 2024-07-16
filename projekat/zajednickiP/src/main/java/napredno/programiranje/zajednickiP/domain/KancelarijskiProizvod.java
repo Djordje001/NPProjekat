@@ -1,4 +1,4 @@
-package org.zajednickiP.domain;
+package napredno.programiranje.zajednickiP.domain;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

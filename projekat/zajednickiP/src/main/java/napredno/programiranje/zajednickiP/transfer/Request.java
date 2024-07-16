@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zajednickiP.transfer;
+package napredno.programiranje.zajednickiP.transfer;
 
 import java.io.Serializable;
 

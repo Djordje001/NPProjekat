@@ -1,28 +1,28 @@
-package org.serverP;
+package napredno.programiranje.serverP;
 
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import org.serverP.db.DBBroker;
-import org.serverP.so.administrator.SOGetAllAdministrator;
-import org.serverP.thread.ThreadServer;
-import org.zajednickiP.domain.AbstractDomainObject;
-import org.zajednickiP.domain.Administrator;
-import org.zajednickiP.domain.Autor;
-import org.zajednickiP.domain.KancelarijskiProizvod;
-import org.zajednickiP.domain.Knjiga;
-import org.zajednickiP.domain.Kupac;
-import org.zajednickiP.domain.Pisac;
-import org.zajednickiP.domain.Porudzbina;
-import org.zajednickiP.domain.Proizvod;
-import org.zajednickiP.domain.StavkaPorudzbine;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+
+import napredno.programiranje.serverP.db.DBBroker;
+import napredno.programiranje.serverP.so.administrator.SOGetAllAdministrator;
+import napredno.programiranje.serverP.thread.ThreadServer;
+import napredno.programiranje.zajednickiP.domain.AbstractDomainObject;
+import napredno.programiranje.zajednickiP.domain.Administrator;
+import napredno.programiranje.zajednickiP.domain.Autor;
+import napredno.programiranje.zajednickiP.domain.KancelarijskiProizvod;
+import napredno.programiranje.zajednickiP.domain.Knjiga;
+import napredno.programiranje.zajednickiP.domain.Kupac;
+import napredno.programiranje.zajednickiP.domain.Pisac;
+import napredno.programiranje.zajednickiP.domain.Porudzbina;
+import napredno.programiranje.zajednickiP.domain.Proizvod;
+import napredno.programiranje.zajednickiP.domain.StavkaPorudzbine;
 
 /**
  * Hello world!

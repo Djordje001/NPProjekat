@@ -1,4 +1,4 @@
-package org.zajednickiP;
+package napredno.programiranje.zajednickiP;
 
 /**
  * Hello world!

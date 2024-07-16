@@ -1,4 +1,4 @@
-package org.serverP.so.proizvod;
+package napredno.programiranje.serverP.so.proizvod;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,17 +10,20 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.serverP.db.DBBroker;
-import org.serverP.so.AbstractSO;
-import org.serverP.so.AbstractSOTest;
-import org.serverP.so.autor.SOFindAllAutor;
-import org.serverP.so.pisac.SOGetAllPisac;
-import org.zajednickiP.domain.Autor;
-import org.zajednickiP.domain.KancelarijskiProizvod;
-import org.zajednickiP.domain.Knjiga;
-import org.zajednickiP.domain.Kupac;
-import org.zajednickiP.domain.Pisac;
-import org.zajednickiP.domain.Proizvod;
+
+import napredno.programiranje.serverP.db.DBBroker;
+import napredno.programiranje.serverP.so.AbstractSO;
+import napredno.programiranje.serverP.so.AbstractSOTest;
+import napredno.programiranje.serverP.so.autor.SOFindAllAutor;
+import napredno.programiranje.serverP.so.pisac.SOGetAllPisac;
+import napredno.programiranje.serverP.so.proizvod.SOAddProizvod;
+import napredno.programiranje.serverP.so.proizvod.SOGetAllProizvod;
+import napredno.programiranje.zajednickiP.domain.Autor;
+import napredno.programiranje.zajednickiP.domain.KancelarijskiProizvod;
+import napredno.programiranje.zajednickiP.domain.Knjiga;
+import napredno.programiranje.zajednickiP.domain.Kupac;
+import napredno.programiranje.zajednickiP.domain.Pisac;
+import napredno.programiranje.zajednickiP.domain.Proizvod;
 
 class SOAddProizvodTest  extends AbstractSOTest{
 

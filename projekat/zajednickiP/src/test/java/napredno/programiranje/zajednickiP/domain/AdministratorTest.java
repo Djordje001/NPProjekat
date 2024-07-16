@@ -1,4 +1,4 @@
-package org.zajednickiP.domain;
+package napredno.programiranje.zajednickiP.domain;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,6 +14,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import napredno.programiranje.zajednickiP.domain.AbstractDomainObject;
+import napredno.programiranje.zajednickiP.domain.Administrator;
 
 class AdministratorTest extends AbstractDomainObjectTest {
 	

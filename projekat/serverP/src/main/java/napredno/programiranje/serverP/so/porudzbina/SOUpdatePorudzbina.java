@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.serverP.so.porudzbina;
+package napredno.programiranje.serverP.so.porudzbina;
 
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Date;
 
-import org.serverP.App;
-import org.serverP.db.DBBroker;
-import org.serverP.so.AbstractSO;
-import org.zajednickiP.domain.AbstractDomainObject;
-import org.zajednickiP.domain.Porudzbina;
-import org.zajednickiP.domain.StavkaPorudzbine;
+import napredno.programiranje.serverP.App;
+import napredno.programiranje.serverP.db.DBBroker;
+import napredno.programiranje.serverP.so.AbstractSO;
+import napredno.programiranje.zajednickiP.domain.AbstractDomainObject;
+import napredno.programiranje.zajednickiP.domain.Porudzbina;
+import napredno.programiranje.zajednickiP.domain.StavkaPorudzbine;
 
 
 /**

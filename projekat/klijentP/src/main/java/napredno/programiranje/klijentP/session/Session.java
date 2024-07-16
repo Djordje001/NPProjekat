@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.klijentP.session;
+package napredno.programiranje.klijentP.session;
 
 
 import java.io.IOException;
 import java.net.Socket;
 
-import org.zajednickiP.domain.Administrator;
+import napredno.programiranje.zajednickiP.domain.Administrator;
 
 /**
  *

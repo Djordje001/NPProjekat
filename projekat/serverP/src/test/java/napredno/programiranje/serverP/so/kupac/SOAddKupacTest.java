@@ -1,4 +1,4 @@
-package org.serverP.so.kupac;
+package napredno.programiranje.serverP.so.kupac;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,11 +10,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.serverP.db.DBBroker;
-import org.serverP.so.AbstractSO;
-import org.serverP.so.AbstractSOTest;
-import org.zajednickiP.domain.Kupac;
-import org.zajednickiP.domain.Pisac;
+
+import napredno.programiranje.serverP.db.DBBroker;
+import napredno.programiranje.serverP.so.AbstractSO;
+import napredno.programiranje.serverP.so.AbstractSOTest;
+import napredno.programiranje.serverP.so.kupac.SOAddKupac;
+import napredno.programiranje.serverP.so.kupac.SOGetAllKupac;
+import napredno.programiranje.zajednickiP.domain.Kupac;
+import napredno.programiranje.zajednickiP.domain.Pisac;
 
 class SOAddKupacTest extends AbstractSOTest{
 

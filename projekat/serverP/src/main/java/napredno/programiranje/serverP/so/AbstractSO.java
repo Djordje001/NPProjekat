@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.serverP.so;
+package napredno.programiranje.serverP.so;
 
 
 import java.sql.SQLException;
 
-import org.serverP.db.DBBroker;
-import org.zajednickiP.domain.AbstractDomainObject;
+import napredno.programiranje.serverP.db.DBBroker;
+import napredno.programiranje.zajednickiP.domain.AbstractDomainObject;
 
 /**
  *ova klasa predstavlja abstraktnu sistemsku operaciju sa apstraktnim metodama:validate i execute koje moraju da implementiraju sistemske operacije koje nasledjuju ovu klasu

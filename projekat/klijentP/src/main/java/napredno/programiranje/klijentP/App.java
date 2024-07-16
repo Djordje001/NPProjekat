@@ -1,4 +1,4 @@
-package org.klijentP;
+package napredno.programiranje.klijentP;
 
 import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
@@ -7,8 +7,8 @@ import java.util.Date;
 
 import javax.swing.event.CaretListener;
 
-import org.klijentP.controller.ClientController;
-import org.zajednickiP.domain.*;
+import napredno.programiranje.klijentP.controller.ClientController;
+import napredno.programiranje.zajednickiP.domain.*;
 
 /**
  * Hello world!

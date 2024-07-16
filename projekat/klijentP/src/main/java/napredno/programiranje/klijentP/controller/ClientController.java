@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.klijentP.controller;
+package napredno.programiranje.klijentP.controller;
 
 
 import java.io.ObjectInputStream;
@@ -11,19 +11,19 @@ import java.io.ObjectOutputStream;
 
 import java.util.ArrayList;
 
-import org.klijentP.session.Session;
-import org.zajednickiP.domain.Administrator;
-import org.zajednickiP.domain.Autor;
-import org.zajednickiP.domain.Knjiga;
-import org.zajednickiP.domain.Kupac;
-import org.zajednickiP.domain.Pisac;
-import org.zajednickiP.domain.Porudzbina;
-import org.zajednickiP.domain.Proizvod;
-import org.zajednickiP.domain.StavkaPorudzbine;
-import org.zajednickiP.transfer.Request;
-import org.zajednickiP.transfer.Response;
-import org.zajednickiP.transfer.util.Operation;
-import org.zajednickiP.transfer.util.ResponseStatus;
+import napredno.programiranje.klijentP.session.Session;
+import napredno.programiranje.zajednickiP.domain.Administrator;
+import napredno.programiranje.zajednickiP.domain.Autor;
+import napredno.programiranje.zajednickiP.domain.Knjiga;
+import napredno.programiranje.zajednickiP.domain.Kupac;
+import napredno.programiranje.zajednickiP.domain.Pisac;
+import napredno.programiranje.zajednickiP.domain.Porudzbina;
+import napredno.programiranje.zajednickiP.domain.Proizvod;
+import napredno.programiranje.zajednickiP.domain.StavkaPorudzbine;
+import napredno.programiranje.zajednickiP.transfer.Request;
+import napredno.programiranje.zajednickiP.transfer.Response;
+import napredno.programiranje.zajednickiP.transfer.util.Operation;
+import napredno.programiranje.zajednickiP.transfer.util.ResponseStatus;
 
 
 

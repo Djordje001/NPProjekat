@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.serverP.so.login;
+package napredno.programiranje.serverP.so.login;
 
 
 import java.util.ArrayList;
 
-import org.serverP.db.DBBroker;
-import org.serverP.so.AbstractSO;
-import org.zajednickiP.domain.AbstractDomainObject;
-import org.zajednickiP.domain.Administrator;
-import org.zajednickiP.domain.Kupac;
+import napredno.programiranje.serverP.db.DBBroker;
+import napredno.programiranje.serverP.so.AbstractSO;
+import napredno.programiranje.zajednickiP.domain.AbstractDomainObject;
+import napredno.programiranje.zajednickiP.domain.Administrator;
+import napredno.programiranje.zajednickiP.domain.Kupac;
 
 
 /**

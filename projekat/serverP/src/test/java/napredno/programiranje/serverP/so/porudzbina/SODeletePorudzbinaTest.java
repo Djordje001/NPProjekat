@@ -1,4 +1,4 @@
-package org.serverP.so.porudzbina;
+package napredno.programiranje.serverP.so.porudzbina;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,14 +11,18 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.serverP.so.AbstractSO;
-import org.serverP.so.AbstractSOTest;
-import org.serverP.so.stavkaPorudzbine.SOFindAllStavkaPorudzbine;
-import org.zajednickiP.domain.Administrator;
-import org.zajednickiP.domain.Kupac;
-import org.zajednickiP.domain.Porudzbina;
-import org.zajednickiP.domain.Proizvod;
-import org.zajednickiP.domain.StavkaPorudzbine;
+
+import napredno.programiranje.serverP.so.AbstractSO;
+import napredno.programiranje.serverP.so.AbstractSOTest;
+import napredno.programiranje.serverP.so.porudzbina.SOAddPorudzbina;
+import napredno.programiranje.serverP.so.porudzbina.SODeletePorudzbina;
+import napredno.programiranje.serverP.so.porudzbina.SOGetAllPorudzbina;
+import napredno.programiranje.serverP.so.stavkaPorudzbine.SOFindAllStavkaPorudzbine;
+import napredno.programiranje.zajednickiP.domain.Administrator;
+import napredno.programiranje.zajednickiP.domain.Kupac;
+import napredno.programiranje.zajednickiP.domain.Porudzbina;
+import napredno.programiranje.zajednickiP.domain.Proizvod;
+import napredno.programiranje.zajednickiP.domain.StavkaPorudzbine;
 
 class SODeletePorudzbinaTest extends AbstractSOTest {
 

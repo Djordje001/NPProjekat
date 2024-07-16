@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.serverP.db;
+package napredno.programiranje.serverP.db;
 
 
 import java.io.FileInputStream;
@@ -16,7 +16,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import org.zajednickiP.domain.AbstractDomainObject;
+import napredno.programiranje.zajednickiP.domain.AbstractDomainObject;
 
 /**
  *

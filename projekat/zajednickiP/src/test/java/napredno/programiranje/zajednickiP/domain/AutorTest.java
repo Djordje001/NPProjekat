@@ -1,4 +1,4 @@
-package org.zajednickiP.domain;
+package napredno.programiranje.zajednickiP.domain;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,6 +11,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import napredno.programiranje.zajednickiP.domain.AbstractDomainObject;
+import napredno.programiranje.zajednickiP.domain.Autor;
+import napredno.programiranje.zajednickiP.domain.Knjiga;
+import napredno.programiranje.zajednickiP.domain.Pisac;
 
 class AutorTest extends AbstractDomainObjectTest{
 	Knjiga k;

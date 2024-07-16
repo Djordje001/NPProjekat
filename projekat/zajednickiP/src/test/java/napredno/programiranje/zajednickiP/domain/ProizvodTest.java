@@ -1,4 +1,4 @@
-package org.zajednickiP.domain;
+package napredno.programiranje.zajednickiP.domain;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,6 +7,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import napredno.programiranje.zajednickiP.domain.AbstractDomainObject;
+import napredno.programiranje.zajednickiP.domain.Proizvod;
 
 class ProizvodTest extends AbstractDomainObjectTest{
 
