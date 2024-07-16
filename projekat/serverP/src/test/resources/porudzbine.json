@@ -1,1 +1,302 @@
-[]
+[
+  {
+    "PorudzbinaID": 4,
+    "DatumVreme": "2024-08-06 23:44:23.0",
+    "DatumIsporuke": "2024-09-04",
+    "Grad": "Valjevo",
+    "Adresa": "Maksima Gorkog",
+    "Cena": 1200.0,
+    "Popust": 10.0,
+    "KonacnaCena": 1080.0,
+    "Administrator": {
+      "AdministratorID": 1,
+      "Ime": "Anastasija",
+      "Prezime": "Madic",
+      "Username": "maki",
+      "Password": "makic"
+    },
+    "Kupac": {
+      "KupacID": 8,
+      "Ime": "Pedja",
+      "Prezime": "Bandic",
+      "Email": "pedja@gmail.com",
+      "TipKupca": "FREE"
+    },
+    "StavkePorudzbine": [
+      {
+        "Rb": 611,
+        "Kolicina": 1,
+        "Cena": 1500.0,
+        "Proizvod": {
+          "proizvodID": 99,
+          "cena proizvoda": 1500.0,
+          "naziv": "Naziv 5",
+          "tip": 1,
+          "vrsta": "Stolica",
+          "proizvodjac": "Stolarija Stanisic",
+          "visina": 10.0,
+          "sirina": 20.0,
+          "duzina": 15.0
+        }
+      },
+      {
+        "Rb": 612,
+        "Kolicina": 3,
+        "Cena": 2500.0,
+        "Proizvod": {
+          "proizvodID": 97,
+          "cena proizvoda": 2500.0,
+          "naziv": "Naziv 3",
+          "tip": 2,
+          "izdanje": 1,
+          "opis": "ne bas dobro",
+          "Autori": [
+            {
+              "Rb": 164,
+              "Pisac": {
+                "PisacID": 2,
+                "Ime": "Mesa ",
+                "Prezime": "Selimovic",
+                "Email": "mesa.selimovic@gmail.com"
+              }
+            },
+            {
+              "Rb": 165,
+              "Pisac": {
+                "PisacID": 3,
+                "Ime": "Simo",
+                "Prezime": "Matavulj",
+                "Email": "simo.matavulj@gmail.com"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "PorudzbinaID": 5,
+    "DatumVreme": "2024-08-06 23:45:14.0",
+    "DatumIsporuke": "2024-08-08",
+    "Grad": "Subotica",
+    "Adresa": "Vuka Pantelica",
+    "Cena": 1500.0,
+    "Popust": 30.0,
+    "KonacnaCena": 1050.0,
+    "Administrator": {
+      "AdministratorID": 2,
+      "Ime": "Dule",
+      "Prezime": "Savic",
+      "Username": "dule",
+      "Password": "savic"
+    },
+    "Kupac": {
+      "KupacID": 7,
+      "Ime": "Milojko",
+      "Prezime": "Pantic",
+      "Email": "milojko.pantic@gmail.com",
+      "TipKupca": "FREE"
+    },
+    "StavkePorudzbine": [
+      {
+        "Rb": 8,
+        "Kolicina": 2,
+        "Cena": 400.0,
+        "Proizvod": {
+          "proizvodID": 94,
+          "cena proizvoda": 400.0,
+          "naziv": "Padobran",
+          "tip": 2,
+          "izdanje": 10,
+          "opis": "predobro",
+          "Autori": [
+            {
+              "Rb": 179,
+              "Pisac": {
+                "PisacID": 1,
+                "Ime": "Ivo",
+                "Prezime": "Andric",
+                "Email": "ivo.andric@gmail.com"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "PorudzbinaID": 89,
+    "DatumVreme": "2024-07-27 22:59:59.0",
+    "DatumIsporuke": "2024-07-31",
+    "Grad": "Nis",
+    "Adresa": "Bulevar Nemanjica",
+    "Cena": 3.0,
+    "Popust": 0.0,
+    "KonacnaCena": 3.0,
+    "Administrator": {
+      "AdministratorID": 1,
+      "Ime": "Anastasija",
+      "Prezime": "Madic",
+      "Username": "maki",
+      "Password": "makic"
+    },
+    "Kupac": {
+      "KupacID": 1,
+      "Ime": "Djordje",
+      "Prezime": "Djordjevic",
+      "Email": "djordjevic.dj01@gmail.com",
+      "TipKupca": "FREE"
+    },
+    "StavkePorudzbine": [
+      {
+        "Rb": 598,
+        "Kolicina": 1,
+        "Cena": 3.0,
+        "Proizvod": {
+          "proizvodID": 94,
+          "cena proizvoda": 3.0,
+          "naziv": "Padobran",
+          "tip": 2,
+          "izdanje": 10,
+          "opis": "predobro",
+          "Autori": [
+            {
+              "Rb": 179,
+              "Pisac": {
+                "PisacID": 1,
+                "Ime": "Ivo",
+                "Prezime": "Andric",
+                "Email": "ivo.andric@gmail.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Rb": 599,
+        "Kolicina": 2,
+        "Cena": 10000.0,
+        "Proizvod": {
+          "proizvodID": 97,
+          "cena proizvoda": 10000.0,
+          "naziv": "Naziv 3",
+          "tip": 2,
+          "izdanje": 1,
+          "opis": "ne bas dobro",
+          "Autori": [
+            {
+              "Rb": 164,
+              "Pisac": {
+                "PisacID": 2,
+                "Ime": "Mesa ",
+                "Prezime": "Selimovic",
+                "Email": "mesa.selimovic@gmail.com"
+              }
+            },
+            {
+              "Rb": 165,
+              "Pisac": {
+                "PisacID": 3,
+                "Ime": "Simo",
+                "Prezime": "Matavulj",
+                "Email": "simo.matavulj@gmail.com"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "PorudzbinaID": 91,
+    "DatumVreme": "2024-07-31 23:40:35.0",
+    "DatumIsporuke": "2024-08-01",
+    "Grad": "Pirot",
+    "Adresa": "Dragoljuba Milenkovica ",
+    "Cena": 1500.0,
+    "Popust": 10.0,
+    "KonacnaCena": 1350.0,
+    "Administrator": {
+      "AdministratorID": 2,
+      "Ime": "Dule",
+      "Prezime": "Savic",
+      "Username": "dule",
+      "Password": "savic"
+    },
+    "Kupac": {
+      "KupacID": 1,
+      "Ime": "Djordje",
+      "Prezime": "Djordjevic",
+      "Email": "djordjevic.dj01@gmail.com",
+      "TipKupca": "FREE"
+    },
+    "StavkePorudzbine": [
+      {
+        "Rb": 604,
+        "Kolicina": 3,
+        "Cena": 5000.0,
+        "Proizvod": {
+          "proizvodID": 99,
+          "cena proizvoda": 5000.0,
+          "naziv": "Naziv 5",
+          "tip": 1,
+          "vrsta": "Stolica",
+          "proizvodjac": "Stolarija Stanisic",
+          "visina": 10.0,
+          "sirina": 20.0,
+          "duzina": 15.0
+        }
+      }
+    ]
+  },
+  {
+    "PorudzbinaID": 93,
+    "DatumVreme": "2024-07-31 23:42:30.0",
+    "DatumIsporuke": "2024-07-31",
+    "Grad": "Novi Sad",
+    "Adresa": "Centar",
+    "Cena": 10000.0,
+    "Popust": 20.0,
+    "KonacnaCena": 8000.0,
+    "Administrator": {
+      "AdministratorID": 2,
+      "Ime": "Dule",
+      "Prezime": "Savic",
+      "Username": "dule",
+      "Password": "savic"
+    },
+    "Kupac": {
+      "KupacID": 7,
+      "Ime": "Milojko",
+      "Prezime": "Pantic",
+      "Email": "milojko.pantic@gmail.com",
+      "TipKupca": "FREE"
+    },
+    "StavkePorudzbine": [
+      {
+        "Rb": 609,
+        "Kolicina": 4,
+        "Cena": 3000.0,
+        "Proizvod": {
+          "proizvodID": 94,
+          "cena proizvoda": 3000.0,
+          "naziv": "Padobran",
+          "tip": 2,
+          "izdanje": 10,
+          "opis": "predobro",
+          "Autori": [
+            {
+              "Rb": 179,
+              "Pisac": {
+                "PisacID": 1,
+                "Ime": "Ivo",
+                "Prezime": "Andric",
+                "Email": "ivo.andric@gmail.com"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

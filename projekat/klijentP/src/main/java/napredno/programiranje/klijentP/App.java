@@ -19,29 +19,34 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-       // addProizvod();
-        //deleteProizvod();
-        //getStavke();
-        //getAllProizvod();
-        //findAllProizvod();
-        //login();
-     //  updateProizvod();
-     //   getAllPisac();
-        //getAllKupac();
+       // login();
        // addKupac();
-        //addPorudzbina();
-      //  findAllPorudzbina();
-        //deletePorudzbina();
-     //  updatePorudzbina();
-        //findAllStavke();
-        //findAllAutori();
+        
+       // addProizvod();
+     //  addPorudzbina();
+       // deleteProizvod();
+      // deletePorudzbina();
+        // updateProizvod();
+         // updatePorudzbina();
+        
+        
+       // getAllProizvod();
         //getAllAdministrator();
-      //  getAllPorudzbina();
+        //getAllPorudzbina();
+        //getAllPisac();
+        //getAllKupac();
+        
+        
+       // findAllProizvod();
+       // findAllPorudzbina();
+      //  findAllStavke();
+      //  findAllAutori();
+       
         
     }
     public static void login() {
     	try {
-    		Administrator a=new Administrator(null, "djole", "djole123", "dule1", "savic");
+    		Administrator a=new Administrator(null, "djole", "djole123", "dule", "savic");
     		
         	Administrator pronadjen=ClientController.getInstance().login(a);
         	System.out.println(pronadjen);
@@ -58,7 +63,7 @@ public class App
     	try {
     		ArrayList<Kupac> kupci=ClientController.getInstance().getAllKupac();
     		System.out.println(kupci);
-    		Kupac k=new Kupac(null,"Milojko","Pantic","milojko.pantic@gmail.com","FREE");
+    		Kupac k=new Kupac(null,"Lazar","Hrebeljanovic","lazar.hrebeljanovic@gmail.com","FREE");
     		
     		ClientController.getInstance().addKupac(k);
     		
