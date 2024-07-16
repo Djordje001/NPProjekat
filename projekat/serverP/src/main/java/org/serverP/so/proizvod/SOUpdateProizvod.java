@@ -26,7 +26,7 @@ import org.zajednickiP.domain.Proizvod;
  * ova klasa predstavlja sistemsku operaciju za azuriranje proizvoda
  * azurira se i jedan red u tabeli Knjiga ili KancelarijskiProizvod u zavinosti od tipa,
  * ukoliko se azruira red u tabeli knjige  prvo ce se izbrisati svi prethodni autori knjige i onda ce se dodati novi(ako postoje)
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOUpdateProizvod extends AbstractSO {
 

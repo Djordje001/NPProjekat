@@ -17,7 +17,7 @@ import org.zajednickiP.domain.Kupac;
 
 /**
  * ova klasa predstavlja sistemsku operaciju za login administratora na nas sistem
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOLogin extends AbstractSO {
     /**

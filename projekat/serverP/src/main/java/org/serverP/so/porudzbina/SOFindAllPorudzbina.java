@@ -16,7 +16,7 @@ import org.zajednickiP.domain.Porudzbina;
 
 /**
  *   ova klasa predstavlja sistemsku operaciju za pronalazak svih porudzbina nekog kupca,pretrazivanje se vrsi po imenu i prezimenu kupca
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOFindAllPorudzbina extends AbstractSO {
 

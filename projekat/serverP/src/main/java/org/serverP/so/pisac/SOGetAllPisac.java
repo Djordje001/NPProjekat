@@ -16,7 +16,7 @@ import org.zajednickiP.domain.Pisac;
 
 /**
  * predstavlja sistemsku operaciju za izcitavanje svih pisaca iz baze
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOGetAllPisac extends AbstractSO {
 	/**

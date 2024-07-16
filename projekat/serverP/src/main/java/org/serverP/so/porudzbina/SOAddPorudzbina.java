@@ -31,7 +31,7 @@ import com.google.gson.JsonObject;
 
 /**
  * ova klasa predstavlja sistemsku operaciju za dodavanje porudzbine u bazu i svih njenih stavki
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOAddPorudzbina extends AbstractSO {
 

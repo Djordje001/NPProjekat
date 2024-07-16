@@ -16,7 +16,7 @@ import org.zajednickiP.domain.Kupac;
 
 /**
  * ova klasa predstavlja sistemsku operaciju za izcitavanje svih kupaca iz baze
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOGetAllKupac extends AbstractSO {
 

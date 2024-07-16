@@ -14,7 +14,7 @@ import java.util.Objects;
 
 /**
  *predstavlja autora konkretne knjige i ima podatke konkretnog pisca
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class Autor extends AbstractDomainObject {
 

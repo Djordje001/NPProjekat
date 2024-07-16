@@ -15,7 +15,7 @@ import org.zajednickiP.domain.Proizvod;
  * ova klasa predstavlja sistemsku operaciju za brisanje zeljenog proizvoda
  * izbrisace se jedan red u tabeli proizvod i jedan red u tabeli KancelarijskiProizvid ili Knjiga u zavinosti od tipa 
  * takodje ukoliko se brise red iz tabele knjiga izbrisace se i svi redovi u tabeli Autor koji odgovoaraju toj knjizi
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SODeleteProizvod extends AbstractSO {
 

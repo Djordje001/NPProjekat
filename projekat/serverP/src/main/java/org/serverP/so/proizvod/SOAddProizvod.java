@@ -19,7 +19,7 @@ import org.zajednickiP.domain.StavkaPorudzbine;
  *  ova klasa predstavlja sistemsku operaciju za dodavanje proizvoda
  *  dodace se red u tabeli Proizvod i jedan red u tabeli Knjiga ili KancelarijskiProizvod u zavisnosti od tipa,
  *  ukoliko se dodaje red u tabeli Knjiga dodace se i redovi u tabeli Autori(ako postoje autori za unetu knjigu)
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOAddProizvod extends AbstractSO {
 

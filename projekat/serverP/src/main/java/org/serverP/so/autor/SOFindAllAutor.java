@@ -18,7 +18,7 @@ import org.zajednickiP.domain.Porudzbina;
 
 /**
  * ova klasa predstavlja sistemsku operaciju za pronalazak svih autora neke knjige
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOFindAllAutor extends AbstractSO {
 

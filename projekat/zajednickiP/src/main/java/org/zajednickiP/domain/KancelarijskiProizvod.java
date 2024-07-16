@@ -8,7 +8,7 @@ import java.util.Objects;
 /**
  * Predstavlja Kancelarijski proizvod sa atributima vrsta,proizvodjac,visina,sirina,duzina
  * nasledjuje klasu Proizvod
- * @author Lenovo
+ * @author Djordje Djordjevic
  *
  */
 public class KancelarijskiProizvod extends Proizvod{

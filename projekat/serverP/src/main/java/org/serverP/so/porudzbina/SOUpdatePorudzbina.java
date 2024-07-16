@@ -20,7 +20,7 @@ import org.zajednickiP.domain.StavkaPorudzbine;
 
 /**
  *  ova klasa prestavlja sistemsku operaciju za azuriranje zeljene porudzbine i njenih stavki
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOUpdatePorudzbina extends AbstractSO {
 

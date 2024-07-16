@@ -17,7 +17,7 @@ import org.zajednickiP.domain.Proizvod;
 
 /**
  *   ova klasa predstavlja sistemsku operaciju za pronalazak svih proizvoda po zeljenom nazivu
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOFindAllProizvod extends AbstractSO {
 

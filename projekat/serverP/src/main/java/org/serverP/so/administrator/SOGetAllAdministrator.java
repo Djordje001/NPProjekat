@@ -18,7 +18,7 @@ import org.zajednickiP.domain.Kupac;
 
 /**
  *ova klasa predstavlja sistemsku operaciju za izcitavanje svih administratora iz baze
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOGetAllAdministrator extends AbstractSO {
 

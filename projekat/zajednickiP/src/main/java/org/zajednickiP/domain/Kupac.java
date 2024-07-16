@@ -12,7 +12,7 @@ import java.util.Objects;
 
 /**
  * predstavlja konkretnog kupca sa atributima kupacID,ime,prezime,email,tipKupca
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class Kupac extends AbstractDomainObject {
     /**

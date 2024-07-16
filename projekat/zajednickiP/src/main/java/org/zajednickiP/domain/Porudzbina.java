@@ -14,7 +14,7 @@ import java.util.Objects;
 
 /**
  *predstavlja porudzbinu sa atributima:porudzbinaId,datumVreme,datumIsporuke,grad,adresa,cena,popust,konacnaCena,kupac,administrator,stavkePorudzbine
- * @author Lenovo
+ * @author Djordje Djordjevic 
  */
 public class Porudzbina extends AbstractDomainObject {
 

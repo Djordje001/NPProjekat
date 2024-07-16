@@ -16,7 +16,7 @@ import org.zajednickiP.domain.StavkaPorudzbine;
 
 /**
  *  Ova klasa predstavlja sistemsku operaciju za izcitavanje svih stavki zeljene porudzbine
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOFindAllStavkaPorudzbine extends AbstractSO {
 

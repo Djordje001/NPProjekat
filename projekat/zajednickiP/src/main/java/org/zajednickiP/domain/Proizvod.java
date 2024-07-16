@@ -7,7 +7,7 @@ import java.util.Objects;
 
 /**
  * predstavlja proizvod sa atributima id,cena,naziv,tip
- * @author Lenovo
+ * @author Djordje Djordjevic 
  *
  */
 public class Proizvod extends AbstractDomainObject {

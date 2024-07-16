@@ -12,7 +12,7 @@ import java.util.Objects;
 
 /**
  *  Predstavlja administratora koji ima svoje ime,prezime,username,password
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class Administrator extends AbstractDomainObject {
 

@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * Predstavlja apstraktni domenski objekat koji ima metode neophodne za manipulaciju bazom podataka
  * Sve domenske klase nasledjuju ovu apstraktnu klasu
  *
- * @author Lenovo
+ * @author Djordje Djordjevic 
  */
 public abstract class AbstractDomainObject implements Serializable {
 

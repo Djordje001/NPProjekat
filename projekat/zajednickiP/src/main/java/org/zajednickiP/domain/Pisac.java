@@ -12,7 +12,7 @@ import java.util.Objects;
 
 /**
  * predstavlja konkretnog pisca sa atributima pisacID,ime,prezime,email
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class Pisac extends AbstractDomainObject {
 

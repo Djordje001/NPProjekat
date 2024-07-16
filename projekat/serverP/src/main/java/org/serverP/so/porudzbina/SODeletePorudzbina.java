@@ -13,7 +13,7 @@ import org.zajednickiP.domain.Porudzbina;
 
 /**
  * ova klasa predstavlja sistemsku operaciju za brisanje zeljene porudzbine i svih njenih stavki
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SODeletePorudzbina extends AbstractSO {
 

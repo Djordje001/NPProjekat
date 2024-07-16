@@ -14,7 +14,7 @@ import org.zajednickiP.domain.AbstractDomainObject;
 /**
  *ova klasa predstavlja abstraktnu sistemsku operaciju sa apstraktnim metodama:validate i execute koje moraju da implementiraju sistemske operacije koje nasledjuju ovu klasu
  *pored te 2 metode sadrzi i templeteMethodPatern u vidu metode templeteExecute , i pored ove sadrzi  metode commit i rollback koje su genericke za sve sistemske operacije zato su i impementirane u ovoj klasi
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public abstract class AbstractSO {
     

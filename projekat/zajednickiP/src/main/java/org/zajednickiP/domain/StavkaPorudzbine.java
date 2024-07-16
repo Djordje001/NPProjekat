@@ -14,7 +14,7 @@ import java.util.Objects;
 
 /**
  *  predstavlja konkretnu stavku Porudzbine sa atributima:rb,kolicina,cena,proizvod
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class StavkaPorudzbine extends AbstractDomainObject {
 

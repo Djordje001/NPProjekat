@@ -17,7 +17,7 @@ import org.zajednickiP.domain.Kupac;
 
 /**
  * ova klasa predstavlja sismtesku operaciju za dodavanje novog kupca
- * @author Lenovo
+ * @author Djordje Djordjevic
  */
 public class SOAddKupac extends AbstractSO {
 
